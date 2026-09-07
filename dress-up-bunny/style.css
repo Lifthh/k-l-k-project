@@ -1,0 +1,2104 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    min-height: 100vh;
+    background: #ffeaf3;
+    color: #7c4760;
+    overflow-x: hidden;
+}
+
+/* =====================================================
+   SCREEN
+===================================================== */
+
+.screen {
+    display: none;
+    min-height: 100vh;
+    padding: 30px;
+}
+
+.screen.active {
+    display: flex;
+}
+
+/* =====================================================
+   WELCOME
+===================================================== */
+
+#welcomeScreen {
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    background:
+        radial-gradient(circle at 20% 20%, #ffffff 0 4px, transparent 5px),
+        radial-gradient(circle at 80% 30%, #ffffff 0 4px, transparent 5px),
+        linear-gradient(135deg, #ffdce9, #fff3f8);
+
+    overflow: hidden;
+}
+
+.welcome-card {
+    width: min(480px, 100%);
+    padding: 45px 30px;
+    text-align: center;
+
+    background: rgba(255,255,255,.85);
+
+    border: 5px solid #fff;
+    border-radius: 35px;
+
+    box-shadow:
+        0 20px 50px rgba(180, 93, 130, .2);
+
+    position: relative;
+    z-index: 5;
+}
+
+.welcome-bunny {
+    font-size: 100px;
+    margin-bottom: 10px;
+
+    animation: bounce 2s infinite;
+}
+
+.welcome-card h1 {
+    color: #e66d9d;
+    font-size: 48px;
+}
+
+.welcome-card h2 {
+    color: #a76ba0;
+    font-size: 25px;
+    margin-top: 5px;
+}
+
+.welcome-card p {
+    margin: 20px 0 30px;
+    font-size: 17px;
+}
+
+.main-button {
+    border: none;
+
+    padding: 15px 35px;
+
+    border-radius: 30px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff9fc4,
+            #e86c9c
+        );
+
+    color: white;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 18px rgba(224, 92, 140, .25);
+
+    transition: .25s;
+}
+
+.main-button:hover {
+    transform: translateY(-3px) scale(1.03);
+}
+
+/* =====================================================
+   FLOATING DECORATIONS
+===================================================== */
+
+.welcome-decoration {
+    position: absolute;
+
+    z-index: 10;
+
+    font-size: 35px;
+
+    pointer-events: none;
+
+    animation:
+        floatingEmoji 4s ease-in-out infinite,
+        twinkleEmoji 2.5s ease-in-out infinite;
+}
+
+.decoration-one {
+    top: 10%;
+    left: 8%;
+
+    animation-delay: 0s;
+}
+
+.decoration-two {
+    top: 18%;
+    right: 10%;
+
+    animation-delay: .8s;
+}
+
+.decoration-three {
+    bottom: 15%;
+    left: 10%;
+
+    animation-delay: 1.5s;
+}
+
+.decoration-four {
+    bottom: 12%;
+    right: 13%;
+
+    animation-delay: 2.2s;
+}
+
+/* =====================================================
+   GAME HEADER
+===================================================== */
+
+#dressUpScreen {
+    flex-direction: column;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255,255,255,.8) 2px,
+            transparent 3px
+        ),
+        #fff0f6;
+
+    background-size: 35px 35px;
+
+    position: relative;
+}
+
+.game-header {
+    width: min(1200px, 100%);
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 20px;
+
+    position: relative;
+    z-index: 5;
+}
+
+.game-header h1 {
+    color: #df6696;
+    font-size: 30px;
+}
+
+.game-header p {
+    margin-top: 5px;
+    color: #9a6a80;
+}
+
+.music-button {
+    width: 50px;
+    height: 50px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: white;
+
+    cursor: pointer;
+
+    font-size: 22px;
+
+    box-shadow:
+        0 5px 15px rgba(150, 80, 110, .15);
+}
+
+/* =====================================================
+   GAME CONTAINER
+===================================================== */
+
+.game-container {
+    width: min(1200px, 100%);
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 30px;
+
+    align-items: stretch;
+
+    position: relative;
+    z-index: 5;
+}
+
+/* =====================================================
+   BUNNY SECTION
+===================================================== */
+
+.bunny-section {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+}
+
+.bunny-background {
+    position: relative;
+
+    width: 100%;
+
+    min-height: 560px;
+
+    overflow: hidden;
+
+    border: 8px solid white;
+
+    border-radius: 35px;
+
+    box-shadow:
+        0 15px 40px rgba(170, 90, 120, .18);
+
+    transition: .4s;
+}
+
+/* =====================================================
+   BACKGROUNDS
+===================================================== */
+
+.bg-pink {
+    background:
+        radial-gradient(
+            circle at 20% 20%,
+            #fff 0 8px,
+            transparent 9px
+        ),
+        linear-gradient(
+            135deg,
+            #ffd7e8,
+            #ffedf5
+        );
+}
+
+.bg-purple {
+    background:
+        radial-gradient(
+            circle at 70% 25%,
+            #fff 0 8px,
+            transparent 9px
+        ),
+        linear-gradient(
+            135deg,
+            #e5d4ff,
+            #f4eaff
+        );
+}
+
+.bg-blue {
+    background:
+        radial-gradient(
+            circle at 25% 30%,
+            #fff 0 8px,
+            transparent 9px
+        ),
+        linear-gradient(
+            135deg,
+            #ccefff,
+            #e8f9ff
+        );
+}
+
+.bg-yellow {
+    background:
+        radial-gradient(
+            circle at 75% 25%,
+            #fff 0 8px,
+            transparent 9px
+        ),
+        linear-gradient(
+            135deg,
+            #fff0a9,
+            #fff9dc
+        );
+}
+
+.bg-night {
+    background:
+        radial-gradient(
+            circle at 20% 20%,
+            white 0 2px,
+            transparent 3px
+        ),
+        radial-gradient(
+            circle at 70% 30%,
+            white 0 2px,
+            transparent 3px
+        ),
+        linear-gradient(
+            135deg,
+            #4f477e,
+            #8c7fba
+        );
+}
+
+/* =====================================================
+   BUNNY
+===================================================== */
+
+.bunny {
+    position: absolute;
+
+    left: 50%;
+    bottom: 45px;
+
+    width: 260px;
+    height: 460px;
+
+    transform: translateX(-50%);
+}
+
+/* =====================================================
+   EARS
+===================================================== */
+
+.bunny-ear {
+    position: absolute;
+
+    top: 0;
+
+    width: 70px;
+    height: 180px;
+
+    background: #fffafa;
+
+    border: 5px solid #e9cbd7;
+
+    border-radius:
+        60% 60% 45% 45%;
+
+    z-index: 1;
+}
+
+.bunny-ear::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 15px;
+
+    border-radius: inherit;
+
+    background: #ffd9e6;
+}
+
+.bunny-ear-left {
+    left: 45px;
+
+    transform: rotate(-10deg);
+}
+
+.bunny-ear-right {
+    right: 45px;
+
+    transform: rotate(10deg);
+}
+
+/* =====================================================
+   HEAD
+===================================================== */
+
+.bunny-head {
+    position: absolute;
+
+    top: 75px;
+    left: 50%;
+
+    width: 190px;
+    height: 160px;
+
+    transform: translateX(-50%);
+
+    background: #fffafa;
+
+    border: 5px solid #e9cbd7;
+
+    border-radius: 50%;
+
+    z-index: 3;
+}
+
+/* =====================================================
+   EYES
+===================================================== */
+
+.bunny-eye {
+    position: absolute;
+
+    top: 65px;
+
+    width: 14px;
+    height: 20px;
+
+    background: #604354;
+
+    border-radius: 50%;
+}
+
+.bunny-eye-left {
+    left: 52px;
+}
+
+.bunny-eye-right {
+    right: 52px;
+}
+
+/* =====================================================
+   NOSE
+===================================================== */
+
+.bunny-nose {
+    position: absolute;
+
+    top: 92px;
+    left: 50%;
+
+    width: 12px;
+    height: 9px;
+
+    transform: translateX(-50%);
+
+    background: #e99bb7;
+
+    border-radius: 50%;
+}
+
+/* =====================================================
+   CHEEKS
+===================================================== */
+
+.bunny-cheek {
+    position: absolute;
+
+    top: 95px;
+
+    width: 27px;
+    height: 13px;
+
+    background: #ffc4d9;
+
+    border-radius: 50%;
+
+    opacity: .8;
+}
+
+.bunny-cheek-left {
+    left: 20px;
+}
+
+.bunny-cheek-right {
+    right: 20px;
+}
+
+/* =====================================================
+   BODY
+===================================================== */
+
+.bunny-body {
+    position: absolute;
+
+    top: 220px;
+    left: 50%;
+
+    width: 132px;
+    height: 168px;
+
+    transform: translateX(-50%);
+
+    background: #fffafa;
+
+    border: 5px solid #e9cbd7;
+
+    border-radius:
+        48% 48% 38% 38% /
+        42% 42% 58% 58%;
+
+    z-index: 2;
+}
+
+/* =====================================================
+   TANGAN
+===================================================== */
+
+.bunny-body::before,
+.bunny-body::after {
+    content: "";
+
+    position: absolute;
+
+    top: 48px;
+
+    width: 34px;
+    height: 72px;
+
+    background: #fffafa;
+
+    border: 5px solid #e9cbd7;
+
+    border-radius: 50%;
+
+    z-index: -1;
+}
+
+.bunny-body::before {
+    left: -27px;
+
+    transform: rotate(20deg);
+}
+
+.bunny-body::after {
+    right: -27px;
+
+    transform: rotate(-20deg);
+}
+
+/* =====================================================
+   DRESS
+   FITTED / PRESS BODY
+===================================================== */
+
+.bunny-dress {
+    position: absolute;
+
+    top: 220px;
+    left: 50%;
+
+    width: 122px;
+    height: 164px;
+
+    transform: translateX(-50%);
+
+    z-index: 5;
+
+    border-radius:
+        45% 45% 28% 28% /
+        25% 25% 18% 18%;
+
+    overflow: hidden;
+}
+
+.dress-none {
+    display: none;
+}
+
+/* PINK DRESS */
+
+.dress-pink {
+    background:
+        linear-gradient(
+            180deg,
+            #ffb5d1,
+            #ed659b
+        );
+
+    border: 4px solid #d8548d;
+}
+
+.dress-pink::before {
+    content: "♡";
+
+    position: absolute;
+
+    top: 60px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    color: white;
+
+    font-size: 28px;
+}
+
+/* STRAWBERRY DRESS */
+
+.dress-strawberry {
+    background:
+        radial-gradient(
+            circle,
+            white 0 4px,
+            transparent 5px
+        ),
+        linear-gradient(
+            180deg,
+            #ff9dbb,
+            #e85781
+        );
+
+    background-size:
+        25px 25px,
+        auto;
+
+    border: 4px solid #cf4e76;
+}
+
+/* PURPLE DRESS */
+
+.dress-purple {
+    background:
+        linear-gradient(
+            180deg,
+            #caa6ed,
+            #8f63c3
+        );
+
+    border: 4px solid #7650a8;
+}
+
+/* BLUE DRESS */
+
+.dress-blue {
+    background:
+        linear-gradient(
+            180deg,
+            #a7e5f9,
+            #59a9d4
+        );
+
+    border: 4px solid #468cb5;
+}
+
+/* YELLOW DRESS */
+
+.dress-yellow {
+    background:
+        linear-gradient(
+            180deg,
+            #ffe58a,
+            #f4b94c
+        );
+
+    border: 4px solid #dba039;
+}
+
+/* =====================================================
+   SHOES
+===================================================== */
+
+.bunny-shoes {
+    position: absolute;
+
+    z-index: 8;
+
+    left: 50%;
+
+    bottom: 48px;
+
+    width: 150px;
+    height: 55px;
+
+    transform: translateX(-50%);
+}
+
+.shoes-none {
+    display: none;
+}
+
+.shoes-pink::before,
+.shoes-pink::after,
+.shoes-purple::before,
+.shoes-purple::after,
+.shoes-blue::before,
+.shoes-blue::after {
+    content: "";
+
+    position: absolute;
+
+    bottom: 0;
+
+    width: 58px;
+    height: 36px;
+
+    border-radius:
+        50% 50% 35% 35%;
+
+    box-shadow:
+        inset 0 -7px 0 rgba(255,255,255,.25);
+}
+
+/* PINK */
+
+.shoes-pink::before {
+    left: 10px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #ffb7d1,
+            #e7659b
+        );
+
+    border: 3px solid #d7568c;
+}
+
+.shoes-pink::after {
+    right: 10px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #ffb7d1,
+            #e7659b
+        );
+
+    border: 3px solid #d7568c;
+}
+
+/* PURPLE */
+
+.shoes-purple::before {
+    left: 10px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #d0b3f5,
+            #8964c4
+        );
+
+    border: 3px solid #7651b0;
+}
+
+.shoes-purple::after {
+    right: 10px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #d0b3f5,
+            #8964c4
+        );
+
+    border: 3px solid #7651b0;
+}
+
+/* BLUE */
+
+.shoes-blue::before {
+    left: 10px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #9de1f8,
+            #4c9fce
+        );
+
+    border: 3px solid #438bb6;
+}
+
+.shoes-blue::after {
+    right: 10px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #9de1f8,
+            #4c9fce
+        );
+
+    border: 3px solid #438bb6;
+}
+
+.shoes-pink,
+.shoes-purple,
+.shoes-blue {
+    font-size: 0;
+}
+
+/* =====================================================
+   RIBBON DISEMBUNYIKAN
+===================================================== */
+
+.bunny-ribbon,
+.result-ribbon {
+    display: none !important;
+}
+
+/* Hilangkan tombol kategori Ribbon */
+
+.category-button[data-category="ribbon"] {
+    display: none !important;
+}
+
+/* =====================================================
+   HAT
+===================================================== */
+
+.bunny-hat {
+    position: absolute;
+
+    z-index: 11;
+
+    top: 15px;
+    left: 50%;
+
+    width: 100px;
+    height: 55px;
+
+    transform: translateX(-50%);
+}
+
+.hat-none {
+    display: none;
+}
+
+.hat-crown::before {
+    content: "♛";
+
+    position: absolute;
+
+    left: 50%;
+    top: -10px;
+
+    transform: translateX(-50%);
+
+    color: #f4c542;
+
+    font-size: 65px;
+}
+
+.hat-flower::before {
+    content: "🌸";
+
+    position: absolute;
+
+    left: 50%;
+    top: -5px;
+
+    transform: translateX(-50%);
+
+    font-size: 55px;
+}
+
+.hat-beret::before {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    top: 15px;
+
+    width: 95px;
+    height: 48px;
+
+    transform: translateX(-50%);
+
+    background: #9a70c8;
+
+    border: 4px solid #7650a7;
+
+    border-radius:
+        60% 60% 40% 40%;
+}
+
+/* =====================================================
+   BAG
+===================================================== */
+
+.bunny-bag {
+    position: absolute;
+
+    z-index: 10;
+
+    width: 72px;
+    height: 85px;
+
+    right: 4px;
+    top: 250px;
+}
+
+.bag-none {
+    display: none;
+}
+
+/* TALI TAS */
+
+.bunny-bag::after {
+    content: "";
+
+    position: absolute;
+
+    width: 48px;
+    height: 55px;
+
+    left: 4px;
+    top: -20px;
+
+    border-left: 4px solid #d85b91;
+    border-top: 4px solid #d85b91;
+
+    border-radius: 50%;
+
+    transform: rotate(-15deg);
+
+    z-index: -1;
+}
+
+/* HEART BAG */
+
+.bag-heart::before {
+    content: "♡";
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 58px;
+    height: 58px;
+
+    background: #ff8fbb;
+
+    border: 4px solid #d85b91;
+
+    border-radius: 50%;
+
+    color: white;
+
+    font-size: 34px;
+
+    box-shadow:
+        0 4px 8px rgba(180,80,120,.15);
+}
+
+/* STAR BAG */
+
+.bag-star::before {
+    content: "★";
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 58px;
+    height: 58px;
+
+    background: #ffd96a;
+
+    border: 4px solid #e5b83f;
+
+    border-radius: 50%;
+
+    color: white;
+
+    font-size: 29px;
+
+    box-shadow:
+        0 4px 8px rgba(180,130,40,.15);
+}
+
+/* BUNNY BAG */
+
+.bag-bunny::before {
+    content: "🐰";
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 58px;
+    height: 58px;
+
+    background: #fff;
+
+    border: 4px solid #e5b7c8;
+
+    border-radius: 50%;
+
+    font-size: 28px;
+
+    box-shadow:
+        0 4px 8px rgba(180,80,120,.12);
+}
+
+/* =====================================================
+   SPARKLES
+===================================================== */
+
+.sparkle {
+    position: absolute;
+
+    color: white;
+
+    font-size: 30px;
+
+    pointer-events: none;
+
+    animation:
+        twinkle 2s infinite,
+        sparkleFloat 3s ease-in-out infinite;
+}
+
+.sparkle-one {
+    top: 30px;
+    left: 40px;
+
+    animation-delay: 0s;
+}
+
+.sparkle-two {
+    top: 120px;
+    right: 45px;
+
+    animation-delay: .5s;
+}
+
+.sparkle-three {
+    bottom: 80px;
+    left: 70px;
+
+    animation-delay: 1s;
+}
+
+/* =====================================================
+   LOOK NAME
+===================================================== */
+
+.look-name-box {
+    margin-top: 15px;
+
+    padding: 12px 25px;
+
+    background: white;
+
+    border-radius: 25px;
+
+    text-align: center;
+
+    box-shadow:
+        0 5px 15px rgba(160, 80, 110, .1);
+}
+
+.look-name-box span {
+    display: block;
+
+    font-size: 12px;
+
+    color: #a88898;
+}
+
+.look-name-box strong {
+    color: #df6696;
+
+    font-size: 20px;
+}
+
+/* =====================================================
+   CLOSET
+===================================================== */
+
+.closet-section {
+    background: rgba(255,255,255,.9);
+
+    border-radius: 35px;
+
+    padding: 25px;
+
+    box-shadow:
+        0 15px 40px rgba(170, 90, 120, .12);
+}
+
+.category-list {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 10px;
+
+    margin-bottom: 20px;
+}
+
+.category-button {
+    border: 2px solid #f5cbdc;
+
+    background: #fff;
+
+    color: #a35e7e;
+
+    border-radius: 18px;
+
+    padding: 11px 7px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+    transition: .2s;
+}
+
+.category-button:hover,
+.category-button.active {
+    background: #ffd6e6;
+
+    border-color: #ef8fb4;
+
+    transform: translateY(-2px);
+}
+
+/* =====================================================
+   OPTIONS
+===================================================== */
+
+.options-container {
+    min-height: 320px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 15px;
+}
+
+.option {
+    min-height: 130px;
+
+    background: #fff7fa;
+
+    border: 3px solid #f7d4e1;
+
+    border-radius: 22px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    cursor: pointer;
+
+    color: #8f5b70;
+
+    transition: .2s;
+
+    text-align: center;
+}
+
+.option:hover {
+    transform: translateY(-4px);
+
+    border-color: #ee8fb5;
+
+    box-shadow:
+        0 8px 18px rgba(220, 100, 145, .15);
+}
+
+.option.selected {
+    background: #ffe0ec;
+
+    border-color: #df6395;
+
+    box-shadow:
+        0 0 0 4px #ffd0e1;
+}
+
+.option-icon {
+    font-size: 42px;
+}
+
+/* =====================================================
+   CONTROL BUTTONS
+===================================================== */
+
+.control-buttons {
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr 1.3fr;
+
+    gap: 10px;
+
+    margin-top: 20px;
+}
+
+.secondary-button,
+.done-button {
+    border: none;
+
+    border-radius: 18px;
+
+    padding: 14px 10px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+    transition: .2s;
+}
+
+.secondary-button {
+    background: #f8e7ee;
+
+    color: #8e6173;
+}
+
+.done-button {
+    background:
+        linear-gradient(
+            135deg,
+            #ff9fc4,
+            #e66b9b
+        );
+
+    color: white;
+}
+
+.secondary-button:hover,
+.done-button:hover {
+    transform: translateY(-2px);
+}
+
+/* =====================================================
+   RESULT SCREEN
+===================================================== */
+
+#resultScreen {
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffe0ec,
+            #f7e7ff
+        );
+
+    overflow: hidden;
+}
+
+/* =====================================================
+   RESULT FLOATING EMOJI
+===================================================== */
+
+.result-floating {
+    position: absolute;
+
+    z-index: 2;
+
+    pointer-events: none;
+
+    font-size: 32px;
+
+    animation:
+        resultFloat 4s ease-in-out infinite,
+        resultTwinkle 2.5s ease-in-out infinite;
+}
+
+/* LOVE */
+
+.result-float-1 {
+    top: 12%;
+    left: 8%;
+
+    animation-delay: 0s;
+}
+
+/* STAR */
+
+.result-float-2 {
+    top: 20%;
+    right: 9%;
+
+    animation-delay: .7s;
+}
+
+/* PETIR */
+
+.result-float-3 {
+    bottom: 18%;
+    left: 10%;
+
+    animation-delay: 1.4s;
+}
+
+/* BINTANG */
+
+.result-float-4 {
+    bottom: 12%;
+    right: 12%;
+
+    animation-delay: 2s;
+}
+
+/* LOVE KECIL */
+
+.result-float-5 {
+    top: 45%;
+    left: 4%;
+
+    font-size: 25px;
+
+    animation-delay: 2.5s;
+}
+
+/* =====================================================
+   RESULT CARD
+===================================================== */
+
+.result-card {
+    width: min(550px, 100%);
+
+    padding: 30px;
+
+    background: white;
+
+    border-radius: 35px;
+
+    text-align: center;
+
+    box-shadow:
+        0 20px 60px rgba(150, 80, 120, .2);
+
+    position: relative;
+
+    z-index: 5;
+}
+
+.result-small-title {
+    color: #c17b9a;
+
+    font-size: 13px;
+
+    letter-spacing: 2px;
+}
+
+.result-card h1 {
+    color: #df6696;
+
+    margin: 8px 0 20px;
+}
+
+.result-bunny-background {
+    position: relative;
+
+    height: 480px;
+
+    border-radius: 30px;
+
+    overflow: hidden;
+
+    border: 6px solid #fff;
+
+    margin-bottom: 25px;
+}
+
+/* =====================================================
+   RESULT BUNNY
+===================================================== */
+
+.result-bunny {
+    position: absolute;
+
+    left: 50%;
+    bottom: 25px;
+
+    width: 260px;
+    height: 440px;
+
+    transform: translateX(-50%);
+}
+
+/* =====================================================
+   RESULT EARS
+===================================================== */
+
+.result-ear {
+    position: absolute;
+
+    top: 0;
+
+    width: 70px;
+    height: 180px;
+
+    background: #fffafa;
+
+    border: 5px solid #e9cbd7;
+
+    border-radius: 60%;
+
+    z-index: 1;
+}
+
+.result-ear::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 15px;
+
+    background: #ffd9e6;
+
+    border-radius: inherit;
+}
+
+.result-ear-left {
+    left: 45px;
+
+    transform: rotate(-10deg);
+}
+
+.result-ear-right {
+    right: 45px;
+
+    transform: rotate(10deg);
+}
+
+/* =====================================================
+   RESULT HEAD
+===================================================== */
+
+.result-head {
+    position: absolute;
+
+    top: 75px;
+    left: 50%;
+
+    width: 190px;
+    height: 160px;
+
+    transform: translateX(-50%);
+
+    background: #fffafa;
+
+    border: 5px solid #e9cbd7;
+
+    border-radius: 50%;
+
+    z-index: 3;
+}
+
+.result-eye {
+    position: absolute;
+
+    top: 65px;
+
+    width: 14px;
+    height: 20px;
+
+    background: #604354;
+
+    border-radius: 50%;
+}
+
+.result-eye-left {
+    left: 52px;
+}
+
+.result-eye-right {
+    right: 52px;
+}
+
+.result-nose {
+    position: absolute;
+
+    top: 92px;
+    left: 50%;
+
+    width: 12px;
+    height: 9px;
+
+    transform: translateX(-50%);
+
+    background: #e99bb7;
+
+    border-radius: 50%;
+}
+
+.result-cheek {
+    position: absolute;
+
+    top: 95px;
+
+    width: 27px;
+    height: 13px;
+
+    background: #ffc4d9;
+
+    border-radius: 50%;
+}
+
+.result-cheek-left {
+    left: 20px;
+}
+
+.result-cheek-right {
+    right: 20px;
+}
+
+/* =====================================================
+   RESULT BODY
+===================================================== */
+
+.result-body {
+    position: absolute;
+
+    top: 220px;
+    left: 50%;
+
+    width: 132px;
+    height: 168px;
+
+    transform: translateX(-50%);
+
+    background: #fffafa;
+
+    border: 5px solid #e9cbd7;
+
+    border-radius:
+        48% 48% 38% 38% /
+        42% 42% 58% 58%;
+
+    z-index: 2;
+}
+
+/* RESULT TANGAN */
+
+.result-body::before,
+.result-body::after {
+    content: "";
+
+    position: absolute;
+
+    top: 48px;
+
+    width: 34px;
+    height: 72px;
+
+    background: #fffafa;
+
+    border: 5px solid #e9cbd7;
+
+    border-radius: 50%;
+
+    z-index: -1;
+}
+
+.result-body::before {
+    left: -27px;
+
+    transform: rotate(20deg);
+}
+
+.result-body::after {
+    right: -27px;
+
+    transform: rotate(-20deg);
+}
+
+/* =====================================================
+   RESULT DRESS
+   FITTED
+===================================================== */
+
+.result-dress {
+    position: absolute;
+
+    top: 220px;
+    left: 50%;
+
+    width: 122px;
+    height: 164px;
+
+    transform: translateX(-50%);
+
+    z-index: 5;
+
+    border-radius:
+        45% 45% 28% 28% /
+        25% 25% 18% 18%;
+
+    overflow: hidden;
+}
+
+/* =====================================================
+   RESULT SHOES
+===================================================== */
+
+.result-shoes {
+    position: absolute;
+
+    z-index: 8;
+
+    left: 50%;
+
+    bottom: 23px;
+
+    width: 150px;
+    height: 55px;
+
+    transform: translateX(-50%);
+}
+
+.result-shoes.shoes-pink::before,
+.result-shoes.shoes-pink::after,
+.result-shoes.shoes-purple::before,
+.result-shoes.shoes-purple::after,
+.result-shoes.shoes-blue::before,
+.result-shoes.shoes-blue::after {
+    content: "";
+
+    position: absolute;
+
+    bottom: 0;
+
+    width: 58px;
+    height: 36px;
+
+    border-radius:
+        50% 50% 35% 35%;
+}
+
+.result-shoes.shoes-pink::before {
+    left: 10px;
+    background: #e7659b;
+}
+
+.result-shoes.shoes-pink::after {
+    right: 10px;
+    background: #e7659b;
+}
+
+.result-shoes.shoes-purple::before {
+    left: 10px;
+    background: #8964c4;
+}
+
+.result-shoes.shoes-purple::after {
+    right: 10px;
+    background: #8964c4;
+}
+
+.result-shoes.shoes-blue::before {
+    left: 10px;
+    background: #4c9fce;
+}
+
+.result-shoes.shoes-blue::after {
+    right: 10px;
+    background: #4c9fce;
+}
+
+/* =====================================================
+   RESULT RIBBON DISEMBUNYIKAN
+===================================================== */
+
+.result-ribbon {
+    display: none !important;
+}
+
+/* =====================================================
+   RESULT HAT
+===================================================== */
+
+.result-hat {
+    position: absolute;
+
+    z-index: 11;
+
+    top: 15px;
+    left: 50%;
+
+    width: 100px;
+    height: 55px;
+
+    transform: translateX(-50%);
+}
+
+.result-hat.hat-crown::before {
+    content: "♛";
+
+    position: absolute;
+
+    left: 50%;
+    top: -10px;
+
+    transform: translateX(-50%);
+
+    color: #f4c542;
+
+    font-size: 65px;
+}
+
+.result-hat.hat-flower::before {
+    content: "🌸";
+
+    position: absolute;
+
+    left: 50%;
+    top: -5px;
+
+    transform: translateX(-50%);
+
+    font-size: 55px;
+}
+
+.result-hat.hat-beret::before {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    top: 15px;
+
+    width: 95px;
+    height: 48px;
+
+    transform: translateX(-50%);
+
+    background: #9a70c8;
+
+    border: 4px solid #7650a7;
+
+    border-radius: 60%;
+}
+
+/* =====================================================
+   RESULT BAG
+===================================================== */
+
+.result-bag {
+    position: absolute;
+
+    z-index: 10;
+
+    right: 4px;
+    top: 250px;
+
+    width: 72px;
+    height: 85px;
+}
+
+/* TALI */
+
+.result-bag::after {
+    content: "";
+
+    position: absolute;
+
+    width: 48px;
+    height: 55px;
+
+    left: 4px;
+    top: -20px;
+
+    border-left: 4px solid #d85b91;
+    border-top: 4px solid #d85b91;
+
+    border-radius: 50%;
+
+    transform: rotate(-15deg);
+
+    z-index: -1;
+}
+
+/* HEART */
+
+.result-bag.bag-heart::before {
+    content: "♡";
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 58px;
+    height: 58px;
+
+    background: #ff8fbb;
+
+    border: 4px solid #d85b91;
+
+    border-radius: 50%;
+
+    color: white;
+
+    font-size: 34px;
+}
+
+/* STAR */
+
+.result-bag.bag-star::before {
+    content: "★";
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 58px;
+    height: 58px;
+
+    background: #ffd96a;
+
+    border: 4px solid #e5b83f;
+
+    border-radius: 50%;
+
+    color: white;
+
+    font-size: 29px;
+}
+
+/* BUNNY */
+
+.result-bag.bag-bunny::before {
+    content: "🐰";
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 58px;
+    height: 58px;
+
+    background: white;
+
+    border: 4px solid #e5b7c8;
+
+    border-radius: 50%;
+
+    font-size: 28px;
+}
+
+/* =====================================================
+   ANIMATION
+===================================================== */
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Emoji bergerak naik turun */
+
+@keyframes floatingEmoji {
+
+    0% {
+        transform:
+            translateY(0)
+            rotate(-6deg);
+    }
+
+    25% {
+        transform:
+            translateY(-15px)
+            rotate(6deg);
+    }
+
+    50% {
+        transform:
+            translateY(-28px)
+            rotate(-4deg);
+    }
+
+    75% {
+        transform:
+            translateY(-12px)
+            rotate(5deg);
+    }
+
+    100% {
+        transform:
+            translateY(0)
+            rotate(-6deg);
+    }
+}
+
+/* Result emoji */
+
+@keyframes resultFloat {
+
+    0% {
+        transform:
+            translateY(0)
+            rotate(-8deg);
+    }
+
+    25% {
+        transform:
+            translateY(-15px)
+            rotate(7deg);
+    }
+
+    50% {
+        transform:
+            translateY(-30px)
+            rotate(-6deg);
+    }
+
+    75% {
+        transform:
+            translateY(-15px)
+            rotate(6deg);
+    }
+
+    100% {
+        transform:
+            translateY(0)
+            rotate(-8deg);
+    }
+}
+
+/* Kelap-kelip */
+
+@keyframes twinkleEmoji {
+
+    0%,
+    100% {
+        opacity: .55;
+        transform: scale(.9);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.15);
+    }
+}
+
+/* Sparkle */
+
+@keyframes twinkle {
+
+    0%,
+    100% {
+        opacity: .4;
+        transform: scale(.8);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+}
+
+@keyframes sparkleFloat {
+
+    0%,
+    100% {
+        margin-top: 0;
+    }
+
+    50% {
+        margin-top: -15px;
+    }
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 850px) {
+
+    .game-container {
+        grid-template-columns: 1fr;
+    }
+
+    .bunny-background {
+        min-height: 500px;
+    }
+
+    .result-floating {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 550px) {
+
+    .screen {
+        padding: 15px;
+    }
+
+    .welcome-card h1 {
+        font-size: 38px;
+    }
+
+    .game-header h1 {
+        font-size: 22px;
+    }
+
+    .category-list {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .control-buttons {
+        grid-template-columns: 1fr;
+    }
+
+    .bunny {
+        transform:
+            translateX(-50%)
+            scale(.85);
+
+        transform-origin:
+            bottom center;
+    }
+
+    .options-container {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .option-icon {
+        font-size: 32px;
+    }
+
+    .result-floating {
+        font-size: 24px;
+    }
+
+    .result-float-1 {
+        left: 3%;
+    }
+
+    .result-float-2 {
+        right: 3%;
+    }
+
+    .result-float-3 {
+        left: 4%;
+    }
+
+    .result-float-4 {
+        right: 5%;
+    }
+}

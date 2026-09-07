@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Agar responsive di HP -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Me, Myself & I</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap"
+        rel="stylesheet">
+</head>
+
+
+<body>
+
+    <!-- =====================================================
+         AUDIO / MUSIK
+    ====================================================== -->
+
+    <audio id="backgroundMusic" loop>
+        <source src="audio/music.mp3" type="audio/mpeg">
+    </audio>
+
+
+    <!-- =====================================================
+         MUSIC BUTTON
+    ====================================================== -->
+
+    <button class="music-button" id="musicButton" onclick="toggleMusic()">
+        🎵
+    </button>
+
+
+    <!-- =====================================================
+         OPENING PAGE
+    ====================================================== -->
+
+    <section class="opening" id="opening">
+
+        <!-- Background decoration -->
+
+        <div class="shape shape-one"></div>
+        <div class="shape shape-two"></div>
+        <div class="shape shape-three"></div>
+
+
+        <!-- Floating decorations -->
+
+        <div class="floating floating-1">✦</div>
+        <div class="floating floating-2">♡</div>
+        <div class="floating floating-3">✿</div>
+        <div class="floating floating-4">✧</div>
+        <div class="floating floating-5">♡</div>
+
+
+        <!-- Opening content -->
+
+        <div class="opening-content">
+
+            <p class="welcome">
+                welcome to my little world ♡
+            </p>
+
+            <h1>
+                Me,
+                <span>Myself</span>
+                & I
+            </h1>
+
+            <p class="opening-text">
+                A little place filled with memories,
+                random moments, favorite people,
+                and pieces of me.
+            </p>
+
+
+            <button class="enter-button" onclick="enterWebsite()">
+
+                <span>Enter My World</span>
+
+                <strong>→</strong>
+
+            </button>
+
+        </div>
+
+
+        <div class="scroll-hint">
+            scroll to explore ↓
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+    ====================================================== -->
+
+    <main id="mainContent">
+
+
+        <!-- =================================================
+             NAVBAR
+        ================================================== -->
+
+        <nav class="navbar">
+
+            <div class="logo">
+                MMI<span>.</span>
+            </div>
+
+            <div class="nav-center">
+                little pieces of me ♡
+            </div>
+
+            <div class="nav-right">
+                2026
+            </div>
+
+        </nav>
+
+
+
+        <!-- =================================================
+             HERO
+        ================================================== -->
+
+        <section class="hero">
+
+            <div class="hero-small">
+                — hello, this is me
+            </div>
+
+            <h2>
+                A collection of
+                <span>little moments.</span>
+            </h2>
+
+            <p>
+                Because sometimes the smallest moments
+                become the biggest memories.
+            </p>
+
+            <div class="hero-arrow">
+                ↓
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             ABOUT
+        ================================================== -->
+
+        <section class="about">
+
+            <div class="about-left">
+
+                <p class="section-label">
+                    — 01 / about me
+                </p>
+
+                <h2>
+                    Still
+                    <span>becoming</span>
+                    me.
+                </h2>
+
+            </div>
+
+
+            <div class="about-right">
+
+                <p>
+                    I don't have everything figured out.
+                    And honestly, I don't think I need to.
+                </p>
+
+                <p>
+                    I'm just collecting moments,
+                    meeting people, making memories,
+                    learning things, and becoming
+                    someone I can be proud of.
+                </p>
+
+                <div class="signature">
+                    — me, myself & i ♡
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             MEMORY SECTION
+        ================================================== -->
+
+        <section class="memories">
+
+            <div class="memory-title">
+
+                <p class="section-label">
+                    — 02 / memories
+                </p>
+
+                <h2>
+                    Things I want
+                    <span>to remember.</span>
+                </h2>
+
+                <p class="memory-intro">
+                    Scroll slowly. There are little pieces
+                    of my life waiting for you.
+                </p>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 PHOTO 01
+            ================================================== -->
+
+            <article class="memory-card left reveal">
+
+                <div class="photo-wrapper">
+
+                    <img src="images/image1.jpeg" alt="Memory 01">
+
+                    <div class="photo-label">
+                        01
+                    </div>
+
+                </div>
+
+                <div class="memory-info">
+
+                    <span>
+                        a little moment
+                    </span>
+
+                    <h3>
+                        One of those days
+                        I want to remember.
+                    </h3>
+
+                    <p>
+                        Nothing extraordinary.
+                        Just a moment that somehow
+                        felt special.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =================================================
+                 PHOTO 02
+            ================================================== -->
+
+            <article class="memory-card right reveal">
+
+                <div class="memory-info">
+
+                    <span>
+                        happiness
+                    </span>
+
+                    <h3>
+                        Happiness can be
+                        this simple.
+                    </h3>
+
+                    <p>
+                        Sometimes happiness isn't
+                        a huge achievement.
+                        Sometimes it's just being here.
+                    </p>
+
+                </div>
+
+                <div class="photo-wrapper purple">
+
+                    <img src="images/image2.jpeg" alt="Memory 02">
+
+                    <div class="photo-label">
+                        02
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- PHOTO 03 -->
+
+            <article class="memory-card left reveal">
+
+                <div class="photo-wrapper yellow">
+
+                    <img src="images/image3.jpeg" alt="Memory 03">
+
+                    <div class="photo-label">
+                        03
+                    </div>
+
+                </div>
+
+                <div class="memory-info">
+
+                    <span>
+                        growing
+                    </span>
+
+                    <h3>
+                        I'm still
+                        growing.
+                    </h3>
+
+                    <p>
+                        Changing my mind,
+                        learning from mistakes,
+                        and becoming a better version
+                        of myself.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- PHOTO 04 -->
+
+            <article class="memory-card right reveal">
+
+                <div class="memory-info">
+
+                    <span>
+                        good days
+                    </span>
+
+                    <h3>
+                        Keep the good days
+                        close.
+                    </h3>
+
+                    <p>
+                        Some days deserve
+                        to stay forever.
+                    </p>
+
+                </div>
+
+                <div class="photo-wrapper green">
+
+                    <img src="images/image4.jpeg" alt="Memory 04">
+
+                    <div class="photo-label">
+                        04
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- PHOTO 05 -->
+
+            <article class="memory-card left reveal">
+
+                <div class="photo-wrapper blue">
+
+                    <img src="images/image5.jpeg" alt="Memory 05">
+
+                    <div class="photo-label">
+                        05
+                    </div>
+
+                </div>
+
+                <div class="memory-info">
+
+                    <span>
+                        somewhere
+                    </span>
+
+                    <h3>
+                        Somewhere I felt
+                        completely myself.
+                    </h3>
+
+                    <p>
+                        No pretending.
+                        No overthinking.
+                        Just me.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- PHOTO 06 -->
+
+            <article class="memory-card right reveal">
+
+                <div class="memory-info">
+
+                    <span>
+                        people
+                    </span>
+
+                    <h3>
+                        The people
+                        who make life better.
+                    </h3>
+
+                    <p>
+                        Some people become memories
+                        before we even realize it.
+                    </p>
+
+                </div>
+
+                <div class="photo-wrapper pink">
+
+                    <img src="images/image6.jpeg" alt="Memory 06">
+
+                    <div class="photo-label">
+                        06
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- PHOTO 07 -->
+
+            <article class="memory-card left reveal">
+
+                <div class="photo-wrapper orange">
+
+                    <img src="images/image7.jpeg" alt="Memory 07">
+
+                    <div class="photo-label">
+                        07
+                    </div>
+
+                </div>
+
+                <div class="memory-info">
+
+                    <span>
+                        random days
+                    </span>
+
+                    <h3>
+                        Random moments
+                        are sometimes the best.
+                    </h3>
+
+                    <p>
+                        No plans.
+                        No expectations.
+                        Just a really good day.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- PHOTO 08 -->
+
+            <article class="memory-card right reveal">
+
+                <div class="memory-info">
+
+                    <span>
+                        little things
+                    </span>
+
+                    <h3>
+                        Don't forget
+                        the little things.
+                    </h3>
+
+                    <p>
+                        A laugh.
+                        A conversation.
+                        A sunset.
+                        A song.
+                    </p>
+
+                </div>
+
+                <div class="photo-wrapper lavender">
+
+                    <img src="images/image8.jpegx" alt="Memory 08">
+
+                    <div class="photo-label">
+                        08
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- PHOTO 09 -->
+
+            <article class="memory-card left reveal">
+
+                <div class="photo-wrapper mint">
+
+                    <img src="images/image9.jpeg" alt="Memory 09">
+
+                    <div class="photo-label">
+                        09
+                    </div>
+
+                </div>
+
+                <div class="memory-info">
+
+                    <span>
+                        favorite version
+                    </span>
+
+                    <h3>
+                        My favorite version
+                        of myself.
+                    </h3>
+
+                    <p>
+                        Not perfect.
+                        Just comfortable
+                        being me.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- PHOTO 10 -->
+
+            <article class="memory-card right reveal">
+
+                <div class="memory-info">
+
+                    <span>
+                        memories
+                    </span>
+
+                    <h3>
+                        A memory
+                        worth keeping.
+                    </h3>
+
+                    <p>
+                        One day I'll look back
+                        and miss this exact moment.
+                    </p>
+
+                </div>
+
+                <div class="photo-wrapper coral">
+
+                    <img src="images/image10.jpeg" alt="Memory 10">
+
+                    <div class="photo-label">
+                        10
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- PHOTO 11 -->
+
+            <article class="memory-card left reveal">
+
+                <div class="photo-wrapper sky">
+
+                    <img src="images/image11.jpeg" alt="Memory 11">
+
+                    <div class="photo-label">
+                        11
+                    </div>
+
+                </div>
+
+                <div class="memory-info">
+
+                    <span>
+                        right now
+                    </span>
+
+                    <h3>
+                        Enjoying life
+                        as it happens.
+                    </h3>
+
+                    <p>
+                        Not yesterday.
+                        Not tomorrow.
+                        Just right now.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- PHOTO 12 -->
+
+            <article class="memory-card right reveal">
+
+                <div class="memory-info">
+
+                    <span>
+                        forever
+                    </span>
+
+                    <h3>
+                        I'll keep this
+                        one forever.
+                    </h3>
+
+                    <p>
+                        Some memories deserve
+                        their own little place.
+                    </p>
+
+                </div>
+
+                <div class="photo-wrapper rose">
+
+                    <img src="images/image12.jpeg" alt="Memory 12">
+
+                    <div class="photo-label">
+                        12
+                    </div>
+
+                </div>
+
+            </article>
+
+        </section>
+
+
+
+        <!-- =================================================
+             PHOTO STRIP
+        ================================================== -->
+
+        <section class="photo-strip">
+
+            <div class="strip-track">
+
+                <img src="images/image1.jpeg" alt="">
+                <img src="images/image1.jpeg" alt="">
+                <img src="images/image1.jpeg" alt="">
+                <img src="images/image1.jpeg" alt="">
+                <img src="images/image1.jpeg" alt="">
+                <img src="images/image1.jpeg" alt="">
+
+                <!-- Duplikat agar scrolling terus -->
+
+                <img src="images/image1.jpeg" alt="">
+                <img src="images/image1.jpeg" alt="">
+                <img src="images/image1.jpeg" alt="">
+                <img src="images/image1.jpeg" alt="">
+                <img src="images/image1.jpeg" alt="">
+                <img src="images/image1.jpeg" alt="">
+                <img src="images/image1.jpeg" alt="">
+                <img src="images/image1.jpeg" alt="">
+                <img src="images/image1.jpeg" alt="">
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             FINAL
+        ================================================== -->
+
+        <section class="final">
+
+            <div class="final-star">
+                ✦
+            </div>
+
+            <p>
+                — and that's me
+            </p>
+
+            <h2>
+                Just a small
+                <span>piece</span>
+                of my world.
+            </h2>
+
+            <div class="big-heart">
+                ♡
+            </div>
+
+            <p class="final-text">
+                Thank you for taking a little time
+                to explore my world.
+            </p>
+
+            <p class="final-signature">
+                with love,<br>
+                me, myself & i
+            </p>
+
+        </section>
+
+
+
+        <!-- =================================================
+             FOOTER
+        ================================================== -->
+
+        <footer>
+
+            <p>
+                made by K.L.K Memories 26 with ♡ and memories
+            </p>
+
+            <p>
+                © 2026 Me, Myself & I
+            </p>
+
+        </footer>
+
+
+    </main>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>

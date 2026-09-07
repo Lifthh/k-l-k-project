@@ -1,0 +1,1301 @@
+
+/* =====================================================
+   PINK STAR MINI GAME
+   COLORFUL / CUTE / PINK
+===================================================== */
+
+
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+
+    font-family:
+        "Trebuchet MS",
+        Arial,
+        sans-serif;
+
+    background: #ffd6e7;
+
+    color: #7d3156;
+
+    overflow-x: hidden;
+}
+
+
+/* =====================================================
+   SCREEN
+===================================================== */
+
+.screen {
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100svh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+/* =====================================================
+   WELCOME SCREEN
+===================================================== */
+
+.welcome-screen {
+
+    background:
+        radial-gradient(
+            circle at 20% 20%,
+            #ffffff 0%,
+            transparent 20%
+        ),
+
+        radial-gradient(
+            circle at 80% 80%,
+            #ffc1dc 0%,
+            transparent 30%
+        ),
+
+        linear-gradient(
+            135deg,
+            #ffd9e8,
+            #ffc0dc,
+            #f9c8ff
+        );
+}
+
+
+/* =====================================================
+   WELCOME CARD
+===================================================== */
+
+.welcome-card {
+
+    width: min(600px, 90%);
+
+    padding: 55px 40px;
+
+    text-align: center;
+
+    position: relative;
+
+    z-index: 5;
+
+    border-radius: 35px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #fff2f8
+        );
+
+    border: 5px solid #ffffff;
+
+    box-shadow:
+        0 25px 60px rgba(190, 66, 120, 0.20),
+        0 8px 0 #f6a8c8;
+
+    animation: cardFloat 4s ease-in-out infinite;
+}
+
+
+/* =====================================================
+   CARD DECORATION
+===================================================== */
+
+.welcome-decoration {
+
+    color: #ff70aa;
+
+    font-size: 24px;
+
+    letter-spacing: 8px;
+
+    margin-bottom: 20px;
+}
+
+
+.welcome-small {
+
+    color: #d45a8d;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 12px;
+}
+
+
+.welcome-card h1 {
+
+    color: #ef4f91;
+
+    font-size: clamp(50px, 9vw, 85px);
+
+    line-height: 0.85;
+
+    font-weight: 900;
+
+    letter-spacing: 4px;
+
+    text-shadow:
+        3px 3px 0 #ffc1da;
+}
+
+
+.welcome-card h1 span {
+
+    display: block;
+
+    color: #b85ad7;
+
+    font-size: 0.42em;
+
+    letter-spacing: 8px;
+
+    margin-top: 14px;
+
+    text-shadow:
+        2px 2px 0 #ead0f2;
+}
+
+
+.welcome-description {
+
+    color: #a66b85;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+    margin: 30px auto;
+
+}
+
+
+/* =====================================================
+   GAME BUTTON
+===================================================== */
+
+.game-button {
+
+    border: none;
+
+    border-radius: 50px;
+
+    padding: 16px 28px;
+
+    min-width: 210px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff5c9a,
+            #ec4fbb
+        );
+
+    color: white;
+
+    font-size: 12px;
+
+    font-weight: 900;
+
+    letter-spacing: 3px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 0 #c83f78,
+        0 15px 25px rgba(224, 61, 126, 0.25);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+.game-button::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 50px;
+    height: 100px;
+
+    background: rgba(255,255,255,0.35);
+
+    transform: rotate(25deg);
+
+    left: -80px;
+    top: -20px;
+
+    transition: 0.5s;
+}
+
+
+.game-button:hover::before {
+
+    left: 120%;
+}
+
+
+.game-button:hover {
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 12px 0 #c83f78,
+        0 20px 30px rgba(224, 61, 126, 0.3);
+}
+
+
+.game-button:active {
+
+    transform: translateY(4px);
+
+    box-shadow:
+        0 4px 0 #c83f78,
+        0 8px 15px rgba(224, 61, 126, 0.2);
+}
+
+
+.game-button span,
+.game-button b {
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+.game-button b {
+
+    margin-left: 10px;
+
+    font-size: 17px;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.welcome-footer {
+
+    margin-top: 30px;
+
+    color: #d08aa7;
+
+    font-size: 9px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+}
+
+
+/* =====================================================
+   BUBBLES
+===================================================== */
+
+.bubble {
+
+    position: absolute;
+
+    border-radius: 50%;
+
+    opacity: 0.45;
+
+    pointer-events: none;
+
+    z-index: 1;
+}
+
+
+.bubble-1 {
+
+    width: 150px;
+    height: 150px;
+
+    left: -50px;
+    top: 10%;
+
+    background: #ff9fc6;
+}
+
+
+.bubble-2 {
+
+    width: 90px;
+    height: 90px;
+
+    right: 8%;
+    top: 8%;
+
+    background: #dba5ff;
+}
+
+
+.bubble-3 {
+
+    width: 220px;
+    height: 220px;
+
+    right: -80px;
+    bottom: -50px;
+
+    background: #ff91c0;
+}
+
+
+.bubble-4 {
+
+    width: 70px;
+    height: 70px;
+
+    left: 12%;
+    bottom: 10%;
+
+    background: #ffd45c;
+}
+
+
+.bubble-5 {
+
+    width: 130px;
+    height: 130px;
+
+    left: -50px;
+    top: 15%;
+
+    background: #ff9bc8;
+}
+
+
+.bubble-6 {
+
+    width: 170px;
+    height: 170px;
+
+    right: -70px;
+    bottom: 10%;
+
+    background: #d7a4ff;
+}
+
+
+.bubble-7 {
+
+    width: 150px;
+    height: 150px;
+
+    left: -60px;
+    top: 15%;
+
+    background: #ff9fc9;
+}
+
+
+.bubble-8 {
+
+    width: 200px;
+    height: 200px;
+
+    right: -70px;
+    bottom: -50px;
+
+    background: #d9a5ff;
+}
+
+
+/* =====================================================
+   SPARKLES
+===================================================== */
+
+.sparkle {
+
+    position: absolute;
+
+    z-index: 2;
+
+    font-size: 35px;
+
+    color: #ffffff;
+
+    text-shadow:
+        0 0 10px #ff70ac;
+
+    animation:
+        sparkleAnimation 2s ease-in-out infinite;
+}
+
+
+.sparkle-1 {
+
+    left: 10%;
+    top: 20%;
+}
+
+
+.sparkle-2 {
+
+    right: 15%;
+    top: 30%;
+
+    color: #ff72aa;
+}
+
+
+.sparkle-3 {
+
+    left: 18%;
+    bottom: 20%;
+
+    color: #b966d9;
+}
+
+
+.sparkle-4 {
+
+    right: 10%;
+    bottom: 18%;
+
+    color: #ffca55;
+}
+
+
+/* =====================================================
+   GAME SCREEN
+===================================================== */
+
+.game-screen {
+
+    display: none;
+
+    background:
+        radial-gradient(
+            circle at 20% 20%,
+            #fff6fb,
+            transparent 25%
+        ),
+
+        linear-gradient(
+            135deg,
+            #ffd8e8,
+            #f5c8ff
+        );
+}
+
+
+/* =====================================================
+   GAME CONTAINER
+===================================================== */
+
+.game-container {
+
+    width: min(900px, 92%);
+
+    position: relative;
+
+    z-index: 5;
+}
+
+
+/* =====================================================
+   GAME HEADER
+===================================================== */
+
+.game-header {
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 14px 20px;
+
+    margin-bottom: 15px;
+
+    border-radius: 22px;
+
+    background: rgba(255,255,255,0.9);
+
+    border: 3px solid white;
+
+    box-shadow:
+        0 8px 20px rgba(194, 71, 125, 0.15);
+}
+
+
+.player-info {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+
+.mini-icon {
+
+    width: 42px;
+    height: 42px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #ff78ac;
+
+    color: white;
+
+    font-size: 22px;
+
+    box-shadow:
+        0 4px 0 #d34d83;
+}
+
+
+.player-info span {
+
+    display: block;
+
+    color: #c287a1;
+
+    font-size: 8px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+
+.player-info strong {
+
+    display: block;
+
+    color: #a84270;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+}
+
+
+.score-box {
+
+    text-align: right;
+}
+
+
+.score-box span {
+
+    display: block;
+
+    color: #c287a1;
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+}
+
+
+.score-box strong {
+
+    color: #ee4f91;
+
+    font-size: 26px;
+}
+
+
+/* =====================================================
+   GAME BOARD
+===================================================== */
+
+.game-board {
+
+    height: min(600px, 65vh);
+
+    min-height: 400px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 30px;
+
+    border: 5px solid white;
+
+    background:
+
+        radial-gradient(
+            circle at 20% 30%,
+            rgba(255,255,255,0.9) 0 4px,
+            transparent 5px
+        ),
+
+        radial-gradient(
+            circle at 80% 70%,
+            rgba(255,255,255,0.8) 0 3px,
+            transparent 4px
+        ),
+
+        linear-gradient(
+            135deg,
+            #ffb8d5,
+            #e8b7f5
+        );
+
+    background-size:
+        120px 120px,
+        150px 150px,
+        cover;
+
+    box-shadow:
+        0 15px 40px rgba(186, 67, 119, 0.2);
+}
+
+
+/* =====================================================
+   BOARD TITLE
+===================================================== */
+
+.game-board-title {
+
+    position: absolute;
+
+    top: 18px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    color: #b54478;
+
+    font-size: 11px;
+
+    font-weight: 900;
+
+    letter-spacing: 4px;
+
+    white-space: nowrap;
+
+    pointer-events: none;
+}
+
+
+.game-board-subtitle {
+
+    position: absolute;
+
+    top: 42px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    color: #c8759b;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    white-space: nowrap;
+
+    pointer-events: none;
+}
+
+
+/* =====================================================
+   TARGET
+===================================================== */
+
+.target {
+
+    position: absolute;
+
+    width: 65px;
+    height: 65px;
+
+    border: 5px solid white;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff5f9e,
+            #e952cf
+        );
+
+    color: #fff5a6;
+
+    font-size: 30px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 6px 0 #c83e79,
+        0 8px 20px rgba(189, 44, 109, 0.3);
+
+    transition:
+        transform 0.15s ease;
+
+    animation:
+        targetPulse 1.2s ease-in-out infinite;
+}
+
+
+.target:hover {
+
+    transform: scale(1.15) rotate(8deg);
+}
+
+
+.target:active {
+
+    transform: scale(0.85);
+}
+
+
+/* =====================================================
+   TIMER
+===================================================== */
+
+.timer-card {
+
+    width: 180px;
+
+    margin: 15px auto 0;
+
+    padding: 10px 15px;
+
+    text-align: center;
+
+    border-radius: 20px;
+
+    background: white;
+
+    border: 3px solid #ffffff;
+
+    box-shadow:
+        0 6px 15px rgba(194, 71, 125, 0.15);
+}
+
+
+.timer-card span {
+
+    color: #c287a1;
+
+    font-size: 8px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+
+.timer-card strong {
+
+    color: #ec4f91;
+
+    font-size: 24px;
+
+    margin: 0 5px;
+}
+
+
+.timer-card small {
+
+    color: #c287a1;
+
+    font-size: 8px;
+}
+
+
+/* =====================================================
+   GAME OVER
+===================================================== */
+
+.game-over-screen {
+
+    display: none;
+
+    background:
+        radial-gradient(
+            circle at 30% 20%,
+            #ffffff,
+            transparent 25%
+        ),
+
+        linear-gradient(
+            135deg,
+            #ffc9df,
+            #e8c4ff
+        );
+}
+
+
+.game-over-card {
+
+    width: min(500px, 90%);
+
+    padding: 45px 30px;
+
+    text-align: center;
+
+    position: relative;
+
+    z-index: 5;
+
+    border-radius: 35px;
+
+    background: rgba(255,255,255,0.95);
+
+    border: 5px solid white;
+
+    box-shadow:
+        0 25px 60px rgba(190, 66, 120, 0.2);
+}
+
+
+.game-over-decoration {
+
+    color: #ff71ab;
+
+    font-size: 22px;
+
+    letter-spacing: 8px;
+
+    margin-bottom: 12px;
+}
+
+
+.trophy {
+
+    font-size: 55px;
+
+    margin-bottom: 5px;
+
+    animation:
+        trophyBounce 1.5s ease-in-out infinite;
+}
+
+
+.game-over-small {
+
+    color: #d45a8d;
+
+    font-size: 10px;
+
+    font-weight: bold;
+
+    letter-spacing: 4px;
+}
+
+
+.game-over-card h2 {
+
+    color: #ed4f91;
+
+    font-size: clamp(30px, 7vw, 48px);
+
+    letter-spacing: 4px;
+
+    margin: 8px 0 12px;
+}
+
+
+.result-text {
+
+    color: #a66b85;
+
+    font-size: 12px;
+
+    letter-spacing: 1px;
+}
+
+
+.final-score {
+
+    margin: 5px 0 25px;
+
+    color: #b354d1;
+}
+
+
+.final-score span {
+
+    display: block;
+
+    font-size: 70px;
+
+    line-height: 1;
+
+    font-weight: 900;
+}
+
+
+.final-score small {
+
+    color: #d48bab;
+
+    font-size: 9px;
+
+    font-weight: bold;
+
+    letter-spacing: 4px;
+}
+
+
+.game-over-footer {
+
+    margin-top: 25px;
+
+    color: #d18ba9;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+}
+
+
+/* =====================================================
+   ANIMATIONS
+===================================================== */
+
+@keyframes cardFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+
+@keyframes sparkleAnimation {
+
+    0%,
+    100% {
+        transform: scale(0.8) rotate(0deg);
+
+        opacity: 0.5;
+    }
+
+    50% {
+        transform: scale(1.2) rotate(15deg);
+
+        opacity: 1;
+    }
+}
+
+
+@keyframes targetPulse {
+
+    0%,
+    100% {
+        box-shadow:
+            0 6px 0 #c83e79,
+            0 8px 20px rgba(189, 44, 109, 0.3);
+    }
+
+    50% {
+        box-shadow:
+            0 6px 0 #c83e79,
+            0 8px 35px rgba(255, 65, 147, 0.55);
+    }
+}
+
+
+@keyframes trophyBounce {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(-3deg);
+    }
+
+    50% {
+        transform: translateY(-10px) rotate(3deg);
+    }
+}
+
+
+@keyframes screenFade {
+
+    from {
+        opacity: 0;
+        transform: scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+.fade-in {
+
+    animation:
+        screenFade 0.45s ease forwards;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 650px) {
+
+    .welcome-card {
+
+        width: 92%;
+
+        padding: 42px 22px;
+
+        border-radius: 28px;
+    }
+
+
+    .welcome-decoration {
+
+        font-size: 18px;
+
+        letter-spacing: 5px;
+    }
+
+
+    .welcome-small {
+
+        font-size: 9px;
+
+        letter-spacing: 3px;
+    }
+
+
+    .welcome-card h1 {
+
+        font-size: 48px;
+
+        letter-spacing: 2px;
+    }
+
+
+    .welcome-card h1 span {
+
+        letter-spacing: 5px;
+    }
+
+
+    .welcome-description {
+
+        font-size: 11px;
+
+        margin: 25px auto;
+    }
+
+
+    .game-button {
+
+        min-width: 190px;
+
+        padding: 15px 22px;
+    }
+
+
+    .game-container {
+
+        width: 94%;
+    }
+
+
+    .game-header {
+
+        padding: 10px 13px;
+
+        border-radius: 18px;
+    }
+
+
+    .mini-icon {
+
+        width: 36px;
+        height: 36px;
+
+        font-size: 18px;
+    }
+
+
+    .player-info strong {
+
+        font-size: 10px;
+
+        letter-spacing: 1px;
+    }
+
+
+    .score-box strong {
+
+        font-size: 22px;
+    }
+
+
+    .game-board {
+
+        height: 60vh;
+
+        min-height: 380px;
+
+        border-radius: 25px;
+    }
+
+
+    .game-board-title {
+
+        font-size: 9px;
+
+        letter-spacing: 3px;
+    }
+
+
+    .game-board-subtitle {
+
+        font-size: 8px;
+    }
+
+
+    .target {
+
+        width: 58px;
+        height: 58px;
+
+        font-size: 26px;
+    }
+
+
+    .game-over-card {
+
+        width: 92%;
+
+        padding: 40px 20px;
+
+        border-radius: 28px;
+    }
+
+
+    .final-score span {
+
+        font-size: 60px;
+    }
+
+}
+
+
+/* =====================================================
+   SMALL PHONE
+===================================================== */
+
+@media (max-width: 380px) {
+
+    .welcome-card {
+
+        padding: 35px 18px;
+    }
+
+
+    .welcome-card h1 {
+
+        font-size: 40px;
+    }
+
+
+    .welcome-card h1 span {
+
+        font-size: 0.45em;
+
+        letter-spacing: 3px;
+    }
+
+
+    .welcome-description {
+
+        font-size: 10px;
+    }
+
+
+    .game-board {
+
+        min-height: 350px;
+
+        height: 58vh;
+    }
+
+
+    .target {
+
+        width: 52px;
+        height: 52px;
+
+        font-size: 22px;
+    }
+
+
+    .timer-card {
+
+        width: 160px;
+    }
+
+
+    .bubble-1 {
+
+        width: 100px;
+        height: 100px;
+    }
+
+
+    .bubble-3 {
+
+        width: 150px;
+        height: 150px;
+    }
+
+}

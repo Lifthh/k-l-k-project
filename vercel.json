@@ -1,0 +1,5 @@
+{
+  "rewrites": [
+    { "source": "/", "destination": "/me-myself-and-i/index.html" }
+  ]
+}

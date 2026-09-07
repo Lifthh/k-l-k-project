@@ -1,0 +1,211 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pink Star Mini Game ♡</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================================
+         WELCOME SCREEN
+    ========================================== -->
+
+    <section id="welcomeScreen" class="screen welcome-screen">
+
+        <!-- Decorative bubbles -->
+        <div class="bubble bubble-1"></div>
+        <div class="bubble bubble-2"></div>
+        <div class="bubble bubble-3"></div>
+        <div class="bubble bubble-4"></div>
+
+        <div class="sparkle sparkle-1">✦</div>
+        <div class="sparkle sparkle-2">♡</div>
+        <div class="sparkle sparkle-3">✧</div>
+        <div class="sparkle sparkle-4">★</div>
+
+        <div class="welcome-card">
+
+            <div class="welcome-decoration">
+                ♡ ✦ ♡
+            </div>
+
+            <p class="welcome-small">
+                WELCOME TO
+            </p>
+
+            <h1>
+                PINK
+                <span>STAR GAME</span>
+            </h1>
+
+            <p class="welcome-description">
+                A tiny colorful game made just for fun!
+                <br>
+                Catch as many stars as you can. ✨
+            </p>
+
+            <button id="startButton" class="game-button">
+                <span>START GAME</span>
+                <b>♡</b>
+            </button>
+
+            <div class="welcome-footer">
+                ✦ HAVE FUN & GOOD LUCK ✦
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         GAME SCREEN
+    ========================================== -->
+
+    <section id="gameScreen" class="screen game-screen">
+
+        <div class="bubble bubble-5"></div>
+        <div class="bubble bubble-6"></div>
+
+        <div class="game-container">
+
+            <!-- Header -->
+
+            <div class="game-header">
+
+                <div class="player-info">
+
+                    <div class="mini-icon">
+                        ♡
+                    </div>
+
+                    <div>
+                        <span>PLAYER</span>
+                        <strong>STAR HUNTER</strong>
+                    </div>
+
+                </div>
+
+                <div class="score-box">
+
+                    <span>SCORE</span>
+
+                    <strong id="score">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <!-- Game board -->
+
+            <div class="game-board" id="gameBoard">
+
+                <div class="game-board-title">
+                    CATCH THE STAR!
+                </div>
+
+                <div class="game-board-subtitle">
+                    ✦ Tap the pink star ✦
+                </div>
+
+                <button id="target" class="target">
+                    ★
+                </button>
+
+            </div>
+
+
+            <!-- Timer -->
+
+            <div class="timer-card">
+
+                <span>
+                    TIME LEFT
+                </span>
+
+                <strong id="timer">
+                    30
+                </strong>
+
+                <small>
+                    seconds
+                </small>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         GAME OVER SCREEN
+    ========================================== -->
+
+    <section id="gameOverScreen" class="screen game-over-screen">
+
+        <div class="bubble bubble-7"></div>
+        <div class="bubble bubble-8"></div>
+
+        <div class="game-over-card">
+
+            <div class="game-over-decoration">
+                ✨ ♡ ✨
+            </div>
+
+            <div class="trophy">
+                🏆
+            </div>
+
+            <p class="game-over-small">
+                TIME'S UP!
+            </p>
+
+            <h2>
+                GREAT JOB!
+            </h2>
+
+            <p class="result-text">
+                Your final score is
+            </p>
+
+            <div class="final-score">
+                <span id="finalScore">
+                    0
+                </span>
+
+                <small>
+                    STARS
+                </small>
+            </div>
+
+            <button id="restartButton" class="game-button">
+                <span>PLAY AGAIN</span>
+                <b>↻</b>
+            </button>
+
+            <div class="game-over-footer">
+                Keep shining! ✦
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
+

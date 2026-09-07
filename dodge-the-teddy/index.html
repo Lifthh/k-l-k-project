@@ -1,0 +1,234 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dodge the Teddy 🧸</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ==========================================
+     OPENING SCREEN
+========================================== -->
+
+<section id="openingScreen" class="opening-screen">
+
+    <div class="opening-decoration opening-teddy">
+        🧸
+    </div>
+
+    <div class="opening-decoration opening-heart">
+        ♡
+    </div>
+
+    <div class="opening-decoration opening-star">
+        ✦
+    </div>
+
+    <div class="opening-card">
+
+        <div class="opening-teddy-main">
+            🧸
+        </div>
+
+        <div class="opening-sparkles">
+            ✦　♡　✦
+        </div>
+
+        <h1>Dodge the Teddy</h1>
+
+        <p class="opening-subtitle">
+            A cute little survival game
+        </p>
+
+        <p class="opening-description">
+            🐰 Help the bunny avoid<br>
+            the falling teddy bears!
+        </p>
+
+        <button id="enterGameBtn" class="enter-game-btn">
+            🧸 PLAY NOW
+        </button>
+
+        <div class="opening-hint">
+            ✨ Are you ready?
+        </div>
+
+    </div>
+
+</section>
+
+    <!-- ================================
+         GAME SCREEN
+    ================================= -->
+
+    <section class="game-screen">
+
+        <!-- Floating decorations -->
+        <div class="floating teddy-float">🧸</div>
+        <div class="floating heart-float">♡</div>
+        <div class="floating star-float">✦</div>
+        <div class="floating cloud-float">☁</div>
+
+        <div class="game-wrapper">
+
+            <!-- HEADER -->
+            <div class="game-header">
+
+                <div class="game-title">
+                    <span>🧸</span>
+                    <div>
+                        <h1>Dodge the Teddy</h1>
+                        <p>Don't let them catch you!</p>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- STATS -->
+            <div class="stats">
+
+                <div class="stat-box">
+                    <span>⭐</span>
+                    <div>
+                        <small>SCORE</small>
+                        <strong id="score">0</strong>
+                    </div>
+                </div>
+
+                <div class="stat-box">
+                    <span>🔥</span>
+                    <div>
+                        <small>LEVEL</small>
+                        <strong id="level">1</strong>
+                    </div>
+                </div>
+
+                <div class="stat-box">
+                    <span>❤️</span>
+                    <div>
+                        <small>LIVES</small>
+                        <strong id="lives">❤️❤️❤️</strong>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- GAME AREA -->
+            <div id="gameArea" class="game-area">
+
+                <!-- Background -->
+                <div class="moon">🌙</div>
+
+                <div class="cloud cloud-1">☁️</div>
+                <div class="cloud cloud-2">☁️</div>
+                <div class="cloud cloud-3">☁️</div>
+
+                <!-- Stars -->
+                <div class="stars">
+                    ✦　⋆　✧　✦　⋆　✧　⋆　✦
+                </div>
+
+                <!-- Player -->
+                <div id="player" class="player">
+                    🐰
+                </div>
+
+                <!-- Start message -->
+                <div id="startMessage" class="start-message">
+
+                    <div class="big-teddy">
+                        🧸
+                    </div>
+
+                    <h2>Dodge the Teddy!</h2>
+
+                    <p>
+                        Move left and right<br>
+                        and avoid the falling teddies.
+                    </p>
+
+                    <button id="startBtn" class="start-btn">
+                        ▶ START GAME
+                    </button>
+
+                    <small>
+                        ⌨️ ← → / A D &nbsp; • &nbsp; 📱 Touch buttons
+                    </small>
+
+                </div>
+
+                <!-- Game Over -->
+                <div id="gameOver" class="game-over hidden">
+
+                    <div class="game-over-icon">
+                        💔
+                    </div>
+
+                    <h2>Game Over!</h2>
+
+                    <p>
+                        Your score
+                    </p>
+
+                    <strong id="finalScore">
+                        0
+                    </strong>
+
+                    <p class="best-score">
+                        🏆 Best Score:
+                        <span id="bestScore">0</span>
+                    </p>
+
+                    <button id="restartBtn" class="start-btn">
+                        🔄 PLAY AGAIN
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- MOBILE CONTROLS -->
+            <div class="mobile-controls">
+
+                <button id="leftBtn" class="control-btn">
+                    ◀
+                </button>
+
+                <button id="rightBtn" class="control-btn">
+                    ▶
+                </button>
+
+            </div>
+
+
+            <!-- INSTRUCTION -->
+            <div class="instruction">
+
+                <span>💡</span>
+
+                <p>
+                    Avoid the falling teddy bears!
+                    Every 10 points increases your level.
+                    The higher the level, the faster they fall!
+                </p>
+
+            </div>
+            
+        </div>
+
+    </section>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

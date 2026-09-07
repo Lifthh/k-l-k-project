@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Technical Memory Book</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- =====================================================
+     OPENING
+===================================================== -->
+
+<section class="opening" id="opening">
+
+    <div class="grid-bg"></div>
+
+    <div class="tech-line line-1"></div>
+    <div class="tech-line line-2"></div>
+    <div class="tech-line line-3"></div>
+
+    <div class="opening-content">
+
+        <p class="welcome">
+            // WELCOME TO THE PROJECT //
+        </p>
+
+        <div class="opening-tag">
+            ENGINEERING MEMORY ARCHIVE
+        </div>
+
+        <h1>
+            YANG KATANYA
+            <br>
+            ANAK TEKNIK
+        </h1>
+
+        <div class="opening-subtitle">
+            BTW
+            <strong>#INCOWOTEKNIKWETRUST</strong>
+        </div>
+
+        <div class="tech-symbol">
+            &lt;/&gt;
+        </div>
+
+        <p class="description">
+            kumpulan foto, cerita, dan momen random
+            <br>
+            dari manusia yang katanya anak teknik.
+        </p>
+
+        <button
+            class="open-button"
+            onclick="openDiary()"
+        >
+            [ OPEN MEMORY FILE ]
+        </button>
+
+    </div>
+
+    <div class="opening-footer">
+        SYSTEM ARCHIVE • PERSONAL MEMORY • 2026
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     DIARY
+===================================================== -->
+
+<main class="diary" id="diary">
+
+    <header class="diary-header">
+
+        <div>
+
+            <p class="header-code">
+                PROJECT / MEMORY_ARCHIVE_001
+            </p>
+
+            <h2>
+                TECHNICAL MEMORY BOOK
+            </h2>
+
+        </div>
+
+        <button
+            class="music-button"
+            onclick="toggleMusic()"
+        >
+            <span id="musicIcon">♫</span>
+            <span id="musicText">MUSIC OFF</span>
+        </button>
+
+    </header>
+
+
+    <!-- =================================================
+         BOOK
+    ================================================= -->
+
+    <section class="book-area">
+
+        <!-- CLOSED BOOK -->
+
+        <div
+            class="closed-book"
+            id="closedBook">
+
+            <div class="book-cover">
+
+                <div class="cover-grid"></div>
+                <h3>
+                    MY
+                    <br>
+                    MEMORY
+                    <br>
+                    FILE
+                </h3>
+
+                <div class="cover-symbol">
+                    &lt;/&gt;
+                </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- OPEN BOOK -->
+
+        <div
+            class="open-book"
+            id="openBook"
+        >
+
+            <div
+                class="page page-left"
+                id="leftPage"
+            ></div>
+
+            <div
+                class="page page-right"
+                id="rightPage"
+            ></div>
+
+            <div class="book-middle"></div>
+
+        </div>
+
+    </section>
+
+
+    <div
+        class="click-hint"
+        id="clickHint"
+    >
+        [ CLICK PAGE TO CONTINUE ]
+    </div>
+
+
+    <!-- =================================================
+         VIDEO
+    ================================================= -->
+
+    <section class="video-section">
+
+        <div class="video-title">
+            <span>//</span>
+            SPECIAL FOOTAGE
+            <span>//</span>
+        </div>
+
+        <div class="video-frame">
+
+            <div class="video-label">
+                VIDEO_FILE_001.MP4
+            </div>
+
+            <video
+                id="memoryVideo"
+                controls
+                playsinline
+                preload="metadata"
+            >
+
+                <source
+                    src="video/video.mp4"
+                    type="video/mp4"
+                >
+
+                Browser kamu tidak mendukung video.
+
+            </video>
+
+        </div>
+
+        <p class="video-caption">
+            // archived footage / personal memory //
+        </p>
+
+    </section>
+
+
+    <p class="bottom-text">
+        SYSTEM END // MEMORY SAVED //
+    </p>
+
+</main>
+
+
+<!-- =====================================================
+     MUSIC
+===================================================== -->
+
+<audio
+    id="backgroundMusic"
+    loop
+>
+
+    <source
+        src="audio/lagu.mp3"
+        type="audio/mpeg"
+    >
+
+</audio>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

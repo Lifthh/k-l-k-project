@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pink Bunny Dress Up ♡</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- =====================================================
+     WELCOME SCREEN
+===================================================== -->
+
+<section id="welcomeScreen" class="screen active">
+
+    <div class="welcome-decoration decoration-one">🎀</div>
+    <div class="welcome-decoration decoration-two">🌷</div>
+    <div class="welcome-decoration decoration-three">🍓</div>
+    <div class="welcome-decoration decoration-four">✨</div>
+
+    <div class="welcome-card">
+
+        <div class="welcome-bunny">
+            🐰
+        </div>
+
+        <h1>Pink Bunny</h1>
+
+        <h2>Dress Up Game ♡</h2>
+
+        <p>
+            Let's create the cutest bunny look!
+        </p>
+
+        <button id="startButton" class="main-button">
+            START ♡
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     DRESS UP SCREEN
+===================================================== -->
+
+<section id="dressUpScreen" class="screen">
+
+    <header class="game-header">
+
+        <div>
+            <h1>My Bunny Closet 🎀</h1>
+
+            <p>
+                Choose your favorite outfit!
+            </p>
+        </div>
+
+        <button id="musicButton" class="music-button">
+            🎵
+        </button>
+
+    </header>
+
+
+    <main class="game-container">
+
+        <!-- =================================================
+             BUNNY PREVIEW
+        ================================================== -->
+
+        <div class="bunny-section">
+
+            <div
+                id="bunnyBackground"
+                class="bunny-background bg-pink"
+            >
+
+                <div class="sparkle sparkle-one">
+                    ✦
+                </div>
+
+                <div class="sparkle sparkle-two">
+                    ✧
+                </div>
+
+                <div class="sparkle sparkle-three">
+                    ✦
+                </div>
+
+
+                <div class="bunny">
+
+                    <!-- EARS -->
+
+                    <div class="bunny-ear bunny-ear-left"></div>
+
+                    <div class="bunny-ear bunny-ear-right"></div>
+
+
+                    <!-- HEAD -->
+
+                    <div class="bunny-head">
+
+                        <div class="bunny-eye bunny-eye-left"></div>
+
+                        <div class="bunny-eye bunny-eye-right"></div>
+
+                        <div class="bunny-nose"></div>
+
+                        <div class="bunny-cheek bunny-cheek-left"></div>
+
+                        <div class="bunny-cheek bunny-cheek-right"></div>
+
+                    </div>
+
+
+                    <!-- BODY -->
+
+                    <div class="bunny-body"></div>
+
+
+                    <!-- DRESS -->
+
+                    <div
+                        id="bunnyDress"
+                        class="bunny-dress dress-none"
+                    ></div>
+
+
+                    <!-- SHOES -->
+
+                    <div
+                        id="bunnyShoes"
+                        class="bunny-shoes shoes-none"
+                    ></div>
+
+
+                    <!-- HAT -->
+
+                    <div
+                        id="bunnyHat"
+                        class="bunny-hat hat-none"
+                    ></div>
+
+
+                    <!-- BAG -->
+
+                    <div
+                        id="bunnyBag"
+                        class="bunny-bag bag-none"
+                    ></div>
+
+                </div>
+
+            </div>
+
+
+            <div class="look-name-box">
+
+                <span>
+                    Current Look
+                </span>
+
+                <strong id="lookName">
+                    Pink Bunny
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             CLOSET
+        ================================================== -->
+
+        <div class="closet-section">
+
+            <div class="category-list">
+
+                <button
+                    class="category-button active"
+                    data-category="dress"
+                >
+                    👗 Dress
+                </button>
+
+
+                <button
+                    class="category-button"
+                    data-category="shoes"
+                >
+                    👟 Shoes
+                </button>
+
+
+                <button
+                    class="category-button"
+                    data-category="hat"
+                >
+                    👑 Hat
+                </button>
+
+
+                <button
+                    class="category-button"
+                    data-category="bag"
+                >
+                    👜 Bag
+                </button>
+
+
+                <button
+                    class="category-button"
+                    data-category="background"
+                >
+                    🌸 Room
+                </button>
+
+            </div>
+
+
+            <div
+                id="optionsContainer"
+                class="options-container"
+            ></div>
+
+
+            <div class="control-buttons">
+
+                <button
+                    id="randomButton"
+                    class="secondary-button"
+                >
+                    🎲 Random
+                </button>
+
+
+                <button
+                    id="resetButton"
+                    class="secondary-button"
+                >
+                    ↺ Reset
+                </button>
+
+
+                <button
+                    id="doneButton"
+                    class="done-button"
+                >
+                    Done ♡
+                </button>
+
+            </div>
+
+        </div>
+
+    </main>
+
+</section>
+
+
+<!-- =====================================================
+     RESULT SCREEN
+===================================================== -->
+
+<section id="resultScreen" class="screen">
+
+
+    <!-- =================================================
+         FLOATING RESULT DECORATIONS
+
+         PENTING:
+         Class menggunakan .result-floating
+         supaya cocok dengan CSS.
+    ================================================== -->
+
+    <div class="result-floating result-float-1">
+        💗
+    </div>
+
+
+    <div class="result-floating result-float-2">
+        ⭐
+    </div>
+
+
+    <div class="result-floating result-float-3">
+        ⚡
+    </div>
+
+
+    <div class="result-floating result-float-4">
+        ✨
+    </div>
+
+
+    <div class="result-floating result-float-5">
+        ♡
+    </div>
+
+
+    <!-- =================================================
+         RESULT CARD
+    ================================================== -->
+
+    <div class="result-card">
+
+        <p class="result-small-title">
+            ✨ YOUR BUNNY LOOK ✨
+        </p>
+
+
+        <h1 id="finalLookName">
+            Pink Bunny
+        </h1>
+
+
+        <!-- =================================================
+             RESULT BUNNY AREA
+        ================================================== -->
+
+        <div
+            id="resultBackground"
+            class="result-bunny-background bg-pink"
+        >
+
+
+            <div class="result-bunny">
+
+
+                <!-- EARS -->
+
+                <div class="result-ear result-ear-left"></div>
+
+                <div class="result-ear result-ear-right"></div>
+
+
+                <!-- HEAD -->
+
+                <div class="result-head">
+
+                    <div class="result-eye result-eye-left"></div>
+
+                    <div class="result-eye result-eye-right"></div>
+
+                    <div class="result-nose"></div>
+
+                    <div class="result-cheek result-cheek-left"></div>
+
+                    <div class="result-cheek result-cheek-right"></div>
+
+                </div>
+
+
+                <!-- BODY -->
+
+                <div class="result-body"></div>
+
+
+                <!-- DRESS -->
+
+                <div
+                    id="resultDress"
+                    class="result-dress dress-none"
+                ></div>
+
+
+                <!-- SHOES -->
+
+                <div
+                    id="resultShoes"
+                    class="result-shoes shoes-none"
+                ></div>
+
+
+                <!-- HAT -->
+
+                <div
+                    id="resultHat"
+                    class="result-hat hat-none"
+                ></div>
+
+
+                <!-- BAG -->
+
+                <div
+                    id="resultBag"
+                    class="result-bag bag-none"
+                ></div>
+
+
+            </div>
+
+        </div>
+
+
+        <!-- PLAY AGAIN -->
+
+        <button
+            id="playAgainButton"
+            class="main-button"
+        >
+            PLAY AGAIN ♡
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     MUSIC
+===================================================== -->
+
+<audio
+    id="backgroundMusic"
+    loop
+>
+    <source
+        src="music/music.mp3"
+        type="audio/mpeg"
+    >
+</audio>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

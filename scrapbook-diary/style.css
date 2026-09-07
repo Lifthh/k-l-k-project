@@ -1,0 +1,2452 @@
+
+/* =====================================================
+   ENGINEERING MEMORY LOG
+   DARK TECH / BLACK DENIM INDUSTRIAL SCRAPBOOK
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #05090d;
+    color: #cbd5dc;
+    overflow-x: hidden;
+}
+
+
+/* =====================================================
+   OPENING
+===================================================== */
+
+.opening {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            rgba(0, 220, 255, 0.025) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(0, 220, 255, 0.025) 1px,
+            transparent 1px
+        ),
+        #05090d;
+
+    background-size: 32px 32px;
+}
+
+.opening::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    opacity: 0.22;
+    pointer-events: none;
+
+    background:
+        repeating-linear-gradient(
+            0deg,
+            transparent 0,
+            transparent 3px,
+            rgba(150, 180, 195, 0.12) 4px
+        );
+}
+
+.opening::after {
+    content: "";
+    position: absolute;
+    inset: 35px;
+    border: 1px solid rgba(72, 190, 220, 0.2);
+    pointer-events: none;
+}
+
+.opening-content {
+    position: relative;
+    z-index: 5;
+    width: min(1100px, 92vw);
+    padding: 30px;
+}
+
+.welcome {
+    color: #59c7e8;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 6px;
+    margin-bottom: 25px;
+}
+
+.opening h1 {
+    color: #e9f0f3;
+
+    font-family:
+        Impact,
+        Haettenschweiler,
+        "Arial Narrow Bold",
+        sans-serif;
+
+    font-size: clamp(48px, 7vw, 92px);
+    line-height: 0.95;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+
+    text-shadow:
+        4px 4px 0 #102a38,
+        7px 7px 0 #020507;
+}
+
+.opening h1 span {
+    display: block;
+    margin-top: 18px;
+
+    color: #48c9e8;
+
+    font-family:
+        "Arial Narrow",
+        Arial,
+        sans-serif;
+
+    font-size: 0.5em;
+    font-style: normal;
+    letter-spacing: 7px;
+
+    text-shadow:
+        3px 3px 0 #08202a;
+}
+
+.bunny {
+    display: none;
+}
+
+.description {
+    color: #8399a5;
+    max-width: 600px;
+    margin: 35px auto 0;
+
+    line-height: 1.8;
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.open-button {
+    margin-top: 35px;
+    padding: 16px 34px;
+
+    border: 1px solid #59c7e8;
+
+    background: #0a1820;
+    color: #dce8ed;
+
+    font-weight: bold;
+    letter-spacing: 4px;
+    cursor: pointer;
+
+    box-shadow:
+        7px 7px 0 #020507,
+        inset 0 0 18px rgba(72, 201, 232, 0.08);
+
+    transition: 0.2s;
+}
+
+.open-button:hover {
+    transform: translate(-3px, -3px);
+
+    background: #102a35;
+    color: #6bdcff;
+
+    box-shadow:
+        10px 10px 0 #020507,
+        inset 0 0 22px rgba(72, 201, 232, 0.12);
+}
+
+.open-button:active {
+    transform: translate(3px, 3px);
+    box-shadow: 3px 3px 0 #020507;
+}
+
+.stars {
+    position: absolute;
+    top: 15%;
+    left: 9%;
+
+    color: #3e7182;
+    font-size: 18px;
+}
+
+.star-2 {
+    top: 75%;
+    left: 15%;
+}
+
+.star-3 {
+    top: 22%;
+    left: auto;
+    right: 10%;
+
+    color: #59c7e8;
+    font-size: 22px;
+}
+
+.heart {
+    display: none;
+}
+
+.opening-footer {
+    position: absolute;
+    bottom: 25px;
+    width: 100%;
+
+    text-align: center;
+
+    color: #3f6877;
+    font-size: 9px;
+    letter-spacing: 4px;
+
+    z-index: 5;
+}
+
+.opening-hide {
+    animation: openingFade 0.7s ease forwards;
+}
+
+@keyframes openingFade {
+
+    from {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    to {
+        opacity: 0;
+        transform: scale(1.05);
+    }
+}
+
+
+/* =====================================================
+   DIARY
+===================================================== */
+
+.diary {
+    display: none;
+    min-height: 100vh;
+    padding: 35px 20px 70px;
+
+    background:
+        linear-gradient(
+            rgba(0, 220, 255, 0.025) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(0, 220, 255, 0.025) 1px,
+            transparent 1px
+        ),
+        #070c11;
+
+    background-size: 32px 32px;
+}
+
+.diary-header {
+    max-width: 1100px;
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: 1px solid #20313a;
+    padding-bottom: 18px;
+}
+
+.diary-header p {
+    color: #4c8b9c;
+    font-size: 9px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    margin-bottom: 7px;
+}
+
+.diary-header h2 {
+    color: #e2eaee;
+
+    font-family:
+        "Arial Narrow",
+        Arial,
+        sans-serif;
+
+    font-size: 28px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.music-button {
+    padding: 11px 16px;
+
+    background: #0b161d;
+    border: 1px solid #34515d;
+    color: #aebdc4;
+
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+
+.music-button:hover {
+    border-color: #58c9e8;
+    color: #58c9e8;
+}
+
+.music-button span:first-child {
+    color: #58c9e8;
+    font-size: 18px;
+}
+
+
+/* =====================================================
+   BOOK AREA
+===================================================== */
+
+.book-area {
+    min-height: 690px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    perspective: 1500px;
+}
+
+
+/* =====================================================
+   CLOSED BOOK
+===================================================== */
+
+.closed-book {
+    width: 400px;
+    height: 540px;
+
+    position: relative;
+    z-index: 10;
+}
+
+
+/* =====================================================
+   BLACK DENIM BOOK COVER
+===================================================== */
+
+.book-cover {
+
+    width: 100%;
+    height: 100%;
+
+    position: relative;
+    overflow: hidden;
+
+    border-radius: 3px 9px 9px 3px;
+
+    /* =================================================
+       BLACK DENIM BASE
+    ================================================= */
+
+    background:
+
+        /* horizontal denim threads */
+        repeating-linear-gradient(
+            0deg,
+            rgba(255,255,255,0.025) 0px,
+            rgba(255,255,255,0.025) 1px,
+            transparent 1px,
+            transparent 4px
+        ),
+
+        /* vertical denim threads */
+        repeating-linear-gradient(
+            90deg,
+            rgba(255,255,255,0.018) 0px,
+            rgba(255,255,255,0.018) 1px,
+            transparent 1px,
+            transparent 5px
+        ),
+
+        /* diagonal denim weave */
+        repeating-linear-gradient(
+            135deg,
+            rgba(255,255,255,0.035) 0px,
+            rgba(255,255,255,0.035) 2px,
+            transparent 2px,
+            transparent 7px
+        ),
+
+        /* dark denim gradient */
+        linear-gradient(
+            135deg,
+            #05080a 0%,
+            #101a20 25%,
+            #080d11 50%,
+            #121d22 75%,
+            #05080a 100%
+        );
+
+    border: 2px solid #183746;
+
+    box-shadow:
+
+        /* outer edge */
+        0 0 0 4px rgba(5, 12, 16, 0.8),
+
+        /* book shadow */
+        15px 15px 0 #020507,
+
+        0 20px 50px rgba(0, 0, 0, 0.8),
+
+        /* inner denim depth */
+        inset 0 0 40px rgba(0, 0, 0, 0.7);
+}
+
+
+/* =====================================================
+   DENIM FABRIC EFFECT
+===================================================== */
+
+.book-cover::before {
+
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+
+        repeating-linear-gradient(
+            45deg,
+            transparent 0px,
+            transparent 3px,
+            rgba(100,150,170,0.025) 3px,
+            rgba(100,150,170,0.025) 5px
+        ),
+
+        repeating-linear-gradient(
+            -45deg,
+            transparent 0px,
+            transparent 5px,
+            rgba(255,255,255,0.018) 5px,
+            rgba(255,255,255,0.018) 6px
+        );
+
+    opacity: 0.9;
+
+    pointer-events: none;
+}
+
+
+/* =====================================================
+   DENIM STITCHING
+===================================================== */
+
+.book-cover::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 14px;
+
+    border: 1px dashed rgba(100,170,190,0.30);
+
+    border-radius: 2px;
+
+    pointer-events: none;
+}
+
+
+/* =====================================================
+   COVER DECORATIONS
+===================================================== */
+
+.book-cover .cover-star,
+.book-cover .cover-lightning {
+
+    position: absolute;
+
+    z-index: 20;
+
+    pointer-events: none;
+
+    user-select: none;
+}
+
+
+/* =====================================================
+   STARS
+===================================================== */
+
+.book-cover .cover-star {
+
+    color: #dcebf2;
+
+    font-size: 24px;
+
+    text-shadow:
+        0 0 5px rgba(120,210,255,0.7),
+        0 0 15px rgba(50,150,200,0.35);
+
+    animation: denimStarGlow 3s ease-in-out infinite;
+}
+
+@keyframes denimStarGlow {
+
+    0%,
+    100% {
+        opacity: 0.55;
+        transform: scale(0.9);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.08);
+    }
+}
+
+
+/* =====================================================
+   LIGHTNING
+===================================================== */
+
+.book-cover .cover-lightning {
+
+    color: #b9e8ff;
+
+    font-size: 30px;
+
+    text-shadow:
+        0 0 6px rgba(100,210,255,0.8),
+        0 0 15px rgba(50,150,200,0.5);
+
+    animation: lightningGlow 2.5s ease-in-out infinite;
+}
+
+@keyframes lightningGlow {
+
+    0%,
+    100% {
+        opacity: 0.55;
+        filter: brightness(0.8);
+    }
+
+    50% {
+        opacity: 1;
+        filter: brightness(1.5);
+    }
+}
+
+
+/* =====================================================
+   STAR POSITIONS
+===================================================== */
+
+.book-cover .star-1 {
+    top: 70px;
+    left: 50px;
+}
+
+.book-cover .star-2 {
+    top: 150px;
+    right: 55px;
+    font-size: 16px;
+}
+
+.book-cover .star-3 {
+    bottom: 120px;
+    left: 65px;
+    font-size: 14px;
+}
+
+.book-cover .star-4 {
+    bottom: 55px;
+    right: 80px;
+    font-size: 22px;
+}
+
+
+/* =====================================================
+   LIGHTNING POSITIONS
+===================================================== */
+
+.book-cover .lightning-1 {
+    top: 100px;
+    right: 90px;
+}
+
+.book-cover .lightning-2 {
+    bottom: 100px;
+    left: 80px;
+    font-size: 20px;
+}
+
+
+/* =====================================================
+   COVER CONTENT
+===================================================== */
+
+.stitch {
+    position: absolute;
+    inset: 14px;
+
+    border: 1px dashed #35606e;
+    border-radius: 2px;
+
+    pointer-events: none;
+    z-index: 4;
+}
+
+.cover-label {
+    position: absolute;
+
+    top: 43px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    background: #101d23;
+
+    border: 1px solid #39788b;
+
+    color: #65d4ef;
+
+    padding: 8px 15px;
+
+    font-size: 8px;
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    white-space: nowrap;
+
+    z-index: 8;
+}
+
+.book-cover h3 {
+
+    position: absolute;
+
+    top: 105px;
+
+    width: 100%;
+
+    text-align: center;
+
+    color: #e6eef1;
+
+    font-family:
+        Impact,
+        Haettenschweiler,
+        "Arial Narrow Bold",
+        sans-serif;
+
+    font-size: 55px;
+
+    line-height: 0.9;
+
+    letter-spacing: 5px;
+
+    text-shadow:
+        4px 4px 0 #102c39,
+        7px 7px 0 #020507;
+
+    z-index: 8;
+}
+
+.cover-bunny {
+    display: none;
+}
+
+.cover-text {
+
+    position: absolute;
+
+    top: 285px;
+
+    width: 100%;
+
+    text-align: center;
+
+    color: #5c8290;
+
+    font-size: 8px;
+
+    letter-spacing: 4px;
+
+    z-index: 8;
+}
+
+
+/* =====================================================
+   POCKET
+===================================================== */
+
+.pocket {
+
+    position: absolute;
+
+    left: 50%;
+    bottom: 35px;
+
+    transform: translateX(-50%);
+
+    width: 180px;
+    height: 95px;
+
+    background:
+
+        repeating-linear-gradient(
+            135deg,
+            rgba(255,255,255,0.025) 0px,
+            rgba(255,255,255,0.025) 2px,
+            transparent 2px,
+            transparent 6px
+        ),
+
+        #0b2029;
+
+    border: 1px solid #315967;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    color: #63cde6;
+
+    z-index: 8;
+}
+
+.pocket-stitch {
+
+    position: absolute;
+
+    inset: 7px;
+
+    border: 1px dashed #315967;
+}
+
+.pocket strong {
+
+    font-family:
+        Impact,
+        Haettenschweiler,
+        "Arial Narrow Bold",
+        sans-serif;
+
+    font-size: 26px;
+
+    letter-spacing: 4px;
+}
+
+.pocket small {
+
+    font-size: 7px;
+
+    letter-spacing: 3px;
+
+    color: #718d98;
+}
+
+
+/* =====================================================
+   STRAP
+===================================================== */
+
+.strap {
+
+    position: absolute;
+
+    top: 0;
+    right: 45px;
+
+    width: 38px;
+    height: 150px;
+
+    background: #071118;
+
+    border-left: 2px solid #0d2029;
+    border-right: 2px solid #0d2029;
+
+    padding-top: 15px;
+
+    z-index: 10;
+}
+
+.strap div {
+
+    width: 8px;
+    height: 8px;
+
+    margin: 15px auto;
+
+    border-radius: 50%;
+
+    background: #020507;
+
+    border: 1px solid #4d7480;
+}
+
+.buckle {
+
+    position: absolute;
+
+    top: 62px;
+    right: 12px;
+
+    width: 70px;
+    height: 50px;
+
+    border: 5px solid #667d84;
+
+    transform: rotate(4deg);
+
+    z-index: 11;
+}
+
+.buckle div {
+
+    position: absolute;
+
+    inset: 6px;
+
+    border: 1px solid #263d45;
+}
+
+
+/* =====================================================
+   OPEN BOOK
+===================================================== */
+
+.open-book {
+
+    width: min(1100px, 95vw);
+
+    height: 620px;
+
+    position: absolute;
+
+    display: flex;
+
+    opacity: 0;
+
+    transform:
+        scale(0.72)
+        rotateX(15deg);
+
+    pointer-events: none;
+
+    cursor: pointer;
+}
+
+.book-middle {
+
+    position: absolute;
+
+    left: 50%;
+    top: 0;
+
+    transform: translateX(-50%);
+
+    width: 13px;
+    height: 100%;
+
+    z-index: 20;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0,0,0,0.35),
+            rgba(95,130,140,0.35),
+            rgba(0,0,0,0.4)
+        );
+}
+
+
+/* =====================================================
+   PAGE
+===================================================== */
+
+.page {
+
+    width: 50%;
+    height: 100%;
+
+    position: relative;
+    overflow: hidden;
+
+    padding: 55px;
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,0.015),
+            rgba(0,0,0,0.015)
+        ),
+        #d9d8d2;
+
+    box-shadow:
+        inset 0 0 25px rgba(0,0,0,0.18);
+}
+
+.page::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    background:
+        linear-gradient(
+            rgba(40,50,55,0.035) 1px,
+            transparent 1px
+        );
+
+    background-size: 100% 24px;
+}
+
+.page::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 12px;
+
+    border: 1px solid rgba(35,50,58,0.18);
+
+    pointer-events: none;
+}
+
+.page-left {
+    border-radius: 4px 0 0 4px;
+}
+
+.page-right {
+    border-radius: 0 4px 4px 0;
+}
+
+
+/* =====================================================
+   TEXT
+===================================================== */
+
+.page h1 {
+
+    margin: 20px 0;
+
+    color: #102b36;
+
+    font-family:
+        Impact,
+        Haettenschweiler,
+        "Arial Narrow Bold",
+        sans-serif;
+
+    font-size: 40px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+.date {
+
+    color: #53727d;
+
+    font-size: 9px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+.diary-text {
+
+    color: #35464d;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+    margin-bottom: 17px;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+.quote {
+
+    display: inline-block;
+
+    margin-top: 15px;
+
+    padding: 15px 20px;
+
+    color: #17677b;
+
+    background: #e7ecec;
+
+    border-left: 4px solid #2a91aa;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+
+    transform: rotate(-1deg);
+
+    position: relative;
+
+    z-index: 2;
+}
+
+.quote.pink {
+
+    background: #e1e7e8;
+
+    color: #17677b;
+}
+
+
+/* =====================================================
+   CREATIVE ELEMENTS
+===================================================== */
+
+.creative-box {
+
+    width: 100%;
+
+    padding: 13px;
+
+    margin: 20px 0;
+
+    border: 1px dashed #39899c;
+
+    background: rgba(44,148,172,0.07);
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    color: #163f4b;
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+}
+
+.creative-box span {
+
+    color: #238ba5;
+
+    font-size: 16px;
+}
+
+.creative-box.blue {
+    border-color: #397d90;
+}
+
+.creative-box.yellow {
+
+    display: block;
+
+    border-color: #657b83;
+
+    text-align: center;
+
+    line-height: 1.8;
+}
+
+.creative-box.yellow strong {
+
+    display: block;
+
+    color: #145c70;
+
+    font-family:
+        Impact,
+        Haettenschweiler,
+        "Arial Narrow Bold",
+        sans-serif;
+
+    font-size: 25px;
+
+    letter-spacing: 2px;
+}
+
+.paper-decoration {
+
+    position: absolute;
+
+    z-index: 1;
+
+    color: #398ca1;
+
+    font-size: 22px;
+}
+
+.paper-decoration.flower {
+    display: none;
+}
+
+.paper-decoration.star {
+
+    right: 40px;
+    top: 35px;
+
+    color: #3d8da0;
+}
+
+.page-number {
+
+    position: absolute;
+
+    top: 25px;
+    right: 30px;
+
+    color: #58747e;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 11px;
+
+    z-index: 3;
+}
+
+.list-item {
+
+    margin: 13px 0;
+
+    padding: 10px;
+
+    background: rgba(50,105,119,0.08);
+
+    border-left: 3px solid #448c9f;
+
+    color: #354b53;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 12px;
+}
+
+.list-item span {
+
+    color: #16738a;
+
+    font-weight: bold;
+
+    margin-right: 10px;
+}
+
+
+/* =====================================================
+   POLAROID
+===================================================== */
+
+.mini-polaroid {
+
+    width: 110px;
+    height: 95px;
+
+    margin-top: 25px;
+
+    padding: 15px;
+
+    background: #c8c9c5;
+
+    border: 1px solid #a5aaa8;
+
+    box-shadow:
+        4px 5px 10px rgba(0,0,0,0.18);
+
+    transform: rotate(3deg);
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+.mini-polaroid span {
+
+    font-size: 30px;
+
+    color: #287e92;
+}
+
+.mini-polaroid small {
+
+    color: #566a72;
+
+    font-size: 7px;
+
+    letter-spacing: 1px;
+}
+
+.camera-doodle {
+
+    font-size: 35px;
+
+    text-align: center;
+
+    margin: 15px;
+
+    filter: grayscale(1);
+}
+
+
+/* =====================================================
+   MEMORY TICKET
+===================================================== */
+
+.memory-ticket {
+
+    margin-top: 20px;
+
+    padding: 15px;
+
+    border: 2px dashed #315f6b;
+
+    background: #cbd0cf;
+
+    text-align: center;
+}
+
+.memory-ticket span,
+.memory-ticket small {
+
+    display: block;
+
+    color: #58717a;
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+}
+
+.memory-ticket strong {
+
+    display: block;
+
+    color: #163d49;
+
+    font-family:
+        Impact,
+        Haettenschweiler,
+        "Arial Narrow Bold",
+        sans-serif;
+
+    font-size: 30px;
+
+    margin: 7px;
+}
+
+.big-heart {
+    display: none;
+}
+
+
+/* =====================================================
+   CREATIVE MESSAGE
+===================================================== */
+
+.creative-message {
+
+    text-align: left;
+
+    padding: 15px;
+
+    color: #354b53;
+
+    border-top: 1px solid #9da8aa;
+
+    border-bottom: 1px solid #9da8aa;
+
+    line-height: 1.7;
+}
+
+.creative-message strong {
+
+    color: #174a59;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+}
+
+.tiny-gallery {
+
+    display: flex;
+
+    justify-content: space-around;
+
+    margin: 25px 0;
+
+    font-size: 18px;
+
+    color: #3a8497;
+}
+
+.sun-doodle {
+
+    text-align: center;
+
+    font-size: 45px;
+
+    margin: 10px;
+
+    filter: grayscale(1);
+}
+
+.hand-note {
+
+    margin-top: 25px;
+
+    color: #24758a;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    transform: rotate(-2deg);
+}
+
+.no-context {
+
+    margin-top: 25px;
+
+    padding: 25px 10px;
+
+    border: 2px solid #275a68;
+
+    text-align: center;
+
+    color: #174c5c;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-weight: bold;
+
+    line-height: 1.7;
+
+    letter-spacing: 2px;
+
+    transform: rotate(-1deg);
+}
+
+
+/* =====================================================
+   MEMORY BOX
+===================================================== */
+
+.memory-box {
+
+    margin-top: 25px;
+
+    padding: 20px;
+
+    text-align: center;
+
+    background: #183843;
+
+    color: #dce5e8;
+
+    box-shadow:
+        7px 7px 0 #9da5a5;
+}
+
+.memory-box span,
+.memory-box small {
+
+    display: block;
+
+    font-size: 8px;
+
+    letter-spacing: 3px;
+}
+
+.memory-box strong {
+
+    display: block;
+
+    font-size: 28px;
+
+    font-family:
+        Impact,
+        Haettenschweiler,
+        "Arial Narrow Bold",
+        sans-serif;
+
+    letter-spacing: 2px;
+
+    margin: 7px;
+}
+
+
+/* =====================================================
+   LOCATION
+===================================================== */
+
+.location-card {
+
+    margin: 25px 0;
+
+    padding: 20px;
+
+    background: #cdd3d2;
+
+    border: 1px solid #6f8c94;
+
+    text-align: center;
+}
+
+.location-card span {
+
+    font-size: 28px;
+
+    display: block;
+
+    filter: grayscale(1);
+}
+
+.location-card strong {
+
+    display: block;
+
+    margin: 8px;
+
+    color: #164957;
+
+    letter-spacing: 2px;
+}
+
+.location-card small {
+    color: #5e737a;
+}
+
+.map-doodle {
+
+    color: #2b8298;
+
+    font-size: 14px;
+
+    text-align: center;
+
+    margin-bottom: 20px;
+}
+
+
+/* =====================================================
+   LETTER
+===================================================== */
+
+.letter-box {
+
+    margin-top: 20px;
+
+    padding: 25px;
+
+    background: #dfe1dd;
+
+    border: 1px solid #899799;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    color: #354b53;
+
+    line-height: 1.8;
+
+    transform: rotate(1deg);
+}
+
+.favorite-label {
+
+    display: inline-block;
+
+    margin: 5px 0 20px;
+
+    padding: 8px 15px;
+
+    background: #1b5969;
+
+    color: #e5edef;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+}
+
+
+/* =====================================================
+   FINAL CARD
+===================================================== */
+
+.final-card {
+
+    margin: 20px 0;
+
+    padding: 20px;
+
+    text-align: center;
+
+    border: 2px dashed #315f6b;
+
+    background: #cdd3d2;
+}
+
+.final-symbol {
+    font-size: 0;
+}
+
+.final-symbol::after {
+
+    content: "SYS";
+
+    font-family:
+        Impact,
+        Haettenschweiler,
+        "Arial Narrow Bold",
+        sans-serif;
+
+    font-size: 42px;
+
+    color: #1d687c;
+
+    letter-spacing: 4px;
+}
+
+.final-card strong {
+
+    display: block;
+
+    color: #173f4b;
+
+    font-family:
+        Impact,
+        Haettenschweiler,
+        "Arial Narrow Bold",
+        sans-serif;
+
+    font-size: 22px;
+
+    letter-spacing: 3px;
+}
+
+.final-card small {
+
+    display: block;
+
+    margin-top: 7px;
+
+    color: #60777f;
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+}
+
+
+/* =====================================================
+   PHOTO
+===================================================== */
+
+.tape {
+
+    position: absolute;
+
+    top: 25px;
+    left: 40px;
+
+    width: 85px;
+    height: 22px;
+
+    opacity: 0.85;
+
+    z-index: 5;
+}
+
+.tape-pink {
+    background: #55747e;
+}
+
+.tape-blue {
+    background: #65aabd;
+}
+
+.photo-card {
+
+    position: absolute;
+
+    top: 90px;
+    left: 50%;
+
+    transform:
+        translateX(-50%)
+        rotate(2deg);
+
+    width: 75%;
+    max-width: 340px;
+
+    padding: 12px 12px 20px;
+
+    background: #e8e8e3;
+
+    border: 1px solid #adb4b4;
+
+    box-shadow:
+        0 12px 25px rgba(0,0,0,0.35),
+        4px 4px 0 rgba(30,65,75,0.15);
+
+    z-index: 4;
+}
+
+.photo-card.rotate-left {
+
+    transform:
+        translateX(-50%)
+        rotate(-3deg);
+}
+
+.photo-card.rotate-right {
+
+    transform:
+        translateX(-50%)
+        rotate(4deg);
+}
+
+.photo {
+
+    width: 100%;
+
+    background: #1a2328;
+
+    overflow: hidden;
+}
+
+.photo img {
+
+    width: 100%;
+
+    height: 330px;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+.caption {
+
+    margin-top: 12px;
+
+    text-align: center;
+
+    color: #4f6972;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 10px;
+
+    line-height: 1.5;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+}
+
+
+/* =====================================================
+   NOTES
+===================================================== */
+
+.side-note {
+
+    position: absolute;
+
+    right: 25px;
+    top: 470px;
+
+    width: 145px;
+
+    padding: 12px;
+
+    background: #c8d5d7;
+
+    color: #38545d;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 9px;
+
+    text-align: center;
+
+    transform: rotate(3deg);
+
+    box-shadow:
+        3px 4px 8px rgba(0,0,0,0.2);
+}
+
+.floating-note {
+
+    position: absolute;
+
+    left: 25px;
+    bottom: 55px;
+
+    width: 90px;
+
+    padding: 13px;
+
+    background: #c6d3d6;
+
+    color: #285968;
+
+    font-weight: bold;
+
+    text-align: center;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 10px;
+
+    transform: rotate(-5deg);
+
+    box-shadow:
+        3px 5px 8px rgba(0,0,0,0.15);
+}
+
+.stamp {
+
+    position: absolute;
+
+    left: 35px;
+    bottom: 50px;
+
+    padding: 12px;
+
+    border: 3px double #397889;
+
+    color: #397889;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 9px;
+
+    font-weight: bold;
+
+    text-align: center;
+
+    transform: rotate(-8deg);
+}
+
+
+/* =====================================================
+   STICKERS
+===================================================== */
+
+.sticker {
+
+    position: absolute;
+
+    font-size: 24px;
+
+    z-index: 8;
+
+    filter: grayscale(1);
+}
+
+.sticker-left {
+    left: 30px;
+    bottom: 30px;
+}
+
+.sticker-right {
+    right: 30px;
+    bottom: 30px;
+}
+
+.sticker-star {
+
+    right: 35px;
+    top: 65px;
+
+    color: #337b8e;
+}
+
+.final-stars {
+
+    position: absolute;
+
+    bottom: 30px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    color: #3d8497;
+
+    letter-spacing: 7px;
+}
+
+
+/* =====================================================
+   ANIMATION
+===================================================== */
+
+.page-animation {
+    animation: pageIn 0.7s ease;
+}
+
+@keyframes pageIn {
+
+    from {
+        opacity: 0;
+        transform:
+            translateX(30px)
+            rotateY(-10deg);
+    }
+
+    to {
+        opacity: 1;
+        transform:
+            translateX(0)
+            rotateY(0);
+    }
+}
+
+.book-open-animation {
+
+    animation:
+        bookOpen
+        2.2s
+        cubic-bezier(0.22,1,0.36,1)
+        forwards;
+}
+
+@keyframes bookOpen {
+
+    0% {
+
+        opacity: 0;
+
+        transform:
+            scale(0.65)
+            rotateX(18deg)
+            rotateY(-8deg);
+    }
+
+    45% {
+
+        opacity: 1;
+
+        transform:
+            scale(0.88)
+            rotateX(8deg)
+            rotateY(-3deg);
+    }
+
+    75% {
+
+        transform:
+            scale(0.97)
+            rotateX(3deg)
+            rotateY(1deg);
+    }
+
+    100% {
+
+        opacity: 1;
+
+        transform:
+            scale(1)
+            rotateX(0)
+            rotateY(0);
+    }
+}
+
+.book-close-animation {
+
+    animation:
+        bookClose
+        1.6s
+        cubic-bezier(0.65,0,0.35,1)
+        forwards;
+}
+
+@keyframes bookClose {
+
+    0% {
+
+        opacity: 1;
+
+        transform:
+            scale(1)
+            rotateY(0);
+    }
+
+    50% {
+
+        opacity: 1;
+
+        transform:
+            scale(0.88)
+            rotateY(-8deg);
+    }
+
+    100% {
+
+        opacity: 0;
+
+        transform:
+            scale(0.65)
+            rotateY(-25deg);
+    }
+}
+
+
+/* =====================================================
+   CLICK HINT
+===================================================== */
+
+.click-hint {
+
+    margin: 5px auto 0;
+
+    text-align: center;
+
+    color: #568391;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    animation:
+        hintPulse
+        2s
+        infinite;
+}
+
+@keyframes hintPulse {
+
+    0%,
+    100% {
+        opacity: 0.45;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+
+/* =====================================================
+   VIDEO
+===================================================== */
+
+.video-section {
+
+    max-width: 850px;
+
+    margin: 70px auto 0;
+
+    text-align: center;
+}
+
+.video-title {
+
+    color: #5ac9e5;
+
+    font-family:
+        "Arial Narrow",
+        Arial,
+        sans-serif;
+
+    font-weight: bold;
+
+    font-size: 17px;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 25px;
+}
+
+.video-title span {
+
+    margin: 0 12px;
+
+    color: #365e69;
+}
+
+.video-frame {
+
+    position: relative;
+
+    padding: 18px;
+
+    background: #10191e;
+
+    border: 2px solid #376775;
+
+    box-shadow:
+        12px 12px 0 #020507,
+        inset 0 0 20px rgba(0,0,0,0.35);
+}
+
+.video-frame video {
+
+    width: 100%;
+
+    max-height: 500px;
+
+    display: block;
+
+    background: #020507;
+}
+
+.video-decoration {
+
+    position: absolute;
+
+    font-size: 25px;
+
+    color: #53bfd8;
+
+    z-index: 5;
+}
+
+.video-left {
+
+    top: -18px;
+    left: -15px;
+
+    transform: rotate(-15deg);
+}
+
+.video-right {
+
+    bottom: -18px;
+    right: -15px;
+
+    transform: rotate(15deg);
+}
+
+.video-caption {
+
+    margin-top: 20px;
+
+    color: #55737e;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+}
+
+
+/* =====================================================
+   BOTTOM
+===================================================== */
+
+.bottom-text {
+
+    margin-top: 60px;
+
+    text-align: center;
+
+    color: #41636d;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+}
+
+
+/* =====================================================
+   HIDE GIRLY ELEMENTS
+===================================================== */
+
+.heart,
+.bunny,
+.cover-bunny,
+.big-heart {
+
+    display: none !important;
+}
+
+.sticker-left,
+.sticker-right,
+.sticker-star {
+
+    filter: grayscale(1);
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .opening h1 {
+        font-size: 60px;
+    }
+
+    .open-book {
+        height: 570px;
+    }
+
+    .page {
+        padding: 40px;
+    }
+
+    .page h1 {
+        font-size: 32px;
+    }
+
+    .photo img {
+        height: 290px;
+    }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 650px) {
+
+    .opening::after {
+        inset: 15px;
+    }
+
+    .opening h1 {
+        font-size: 43px;
+    }
+
+    .opening h1 span {
+        font-size: 0.48em;
+        letter-spacing: 3px;
+    }
+
+    .welcome {
+        letter-spacing: 2px;
+    }
+
+    .description {
+        font-size: 9px;
+        letter-spacing: 2px;
+    }
+
+    .diary {
+        padding: 25px 12px 50px;
+    }
+
+    .diary-header {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 15px;
+    }
+
+    .book-area {
+        min-height: 540px;
+    }
+
+    .closed-book {
+
+        width: 290px;
+        height: 410px;
+    }
+
+    .book-cover h3 {
+
+        font-size: 40px;
+
+        top: 85px;
+    }
+
+    .cover-text {
+        top: 230px;
+    }
+
+    .pocket {
+
+        width: 120px;
+        height: 70px;
+
+        bottom: 25px;
+    }
+
+    .strap {
+        right: 30px;
+    }
+
+    .buckle {
+
+        transform:
+            scale(0.75)
+            rotate(4deg);
+
+        transform-origin: right top;
+    }
+
+    .open-book {
+
+        width: 94vw;
+        height: 510px;
+    }
+
+    .page-left {
+        display: none;
+    }
+
+    .page-right {
+
+        width: 100%;
+
+        border-radius: 8px;
+
+        padding: 40px 25px;
+    }
+
+    .book-middle {
+        display: none;
+    }
+
+    .page h1 {
+        font-size: 32px;
+    }
+
+    .diary-text {
+        font-size: 14px;
+    }
+
+    .photo-card {
+
+        width: 80%;
+
+        top: 90px;
+    }
+
+    .photo img {
+        height: 275px;
+    }
+
+    .caption {
+        font-size: 9px;
+    }
+
+    .video-section {
+        margin-top: 45px;
+    }
+
+    .video-frame {
+        padding: 10px;
+    }
+
+    .video-title {
+        font-size: 13px;
+    }
+
+    .side-note {
+
+        top: auto;
+
+        bottom: 35px;
+    }
+
+
+    /* MOBILE DENIM DECORATIONS */
+
+    .book-cover .star-1 {
+        top: 50px;
+        left: 35px;
+        font-size: 18px;
+    }
+
+    .book-cover .star-2 {
+        top: 115px;
+        right: 35px;
+        font-size: 13px;
+    }
+
+    .book-cover .star-3 {
+        bottom: 90px;
+        left: 40px;
+        font-size: 12px;
+    }
+
+    .book-cover .star-4 {
+        bottom: 40px;
+        right: 50px;
+        font-size: 17px;
+    }
+
+    .book-cover .lightning-1 {
+        top: 80px;
+        right: 60px;
+        font-size: 23px;
+    }
+
+    .book-cover .lightning-2 {
+        bottom: 75px;
+        left: 55px;
+        font-size: 17px;
+    }
+}
+
+
+/* =====================================================
+   SMALL PHONE
+===================================================== */
+
+@media (max-width: 380px) {
+
+    .opening h1 {
+        font-size: 38px;
+    }
+
+    .closed-book {
+
+        width: 260px;
+        height: 380px;
+    }
+
+    .open-book {
+        height: 490px;
+    }
+
+    .photo img {
+        height: 250px;
+    }
+
+    .photo-card {
+        width: 82%;
+    }
+
+    .video-title {
+
+        font-size: 11px;
+
+        letter-spacing: 2px;
+    }
+
+    /* SMALL PHONE DENIM */
+
+    .book-cover .star-1 {
+        top: 45px;
+        left: 28px;
+        font-size: 16px;
+    }
+
+    .book-cover .star-2 {
+        top: 100px;
+        right: 28px;
+        font-size: 12px;
+    }
+
+    .book-cover .star-3 {
+        bottom: 80px;
+        left: 32px;
+        font-size: 11px;
+    }
+
+    .book-cover .star-4 {
+        bottom: 35px;
+        right: 40px;
+        font-size: 15px;
+    }
+
+    .book-cover .lightning-1 {
+        top: 70px;
+        right: 48px;
+        font-size: 20px;
+    }
+
+    .book-cover .lightning-2 {
+        bottom: 65px;
+        left: 42px;
+        font-size: 15px;
+    }
+}
